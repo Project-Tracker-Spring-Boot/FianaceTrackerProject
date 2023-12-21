@@ -7,7 +7,7 @@ import java.util.Date;
 public class SearchDTO {
 
     // Expense DTO used to transmit data meant for expense ops from front end HTML to Back end java
-    public record ExpenseSearchDTO  (String name, double cost , Timestamp date, String type){ }
+    public record ExpenseSearchDTO  (String name, double cost , Date date, String type){ }
 
 
 

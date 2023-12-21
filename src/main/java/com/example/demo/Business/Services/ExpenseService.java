@@ -10,6 +10,8 @@ import jakarta.annotation.PostConstruct;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -21,8 +23,6 @@ import java.util.*;
 public class ExpenseService {
 
 
-
-    private List <Expense> Expenses =  List.of( );
 
 @Autowired private final ExpenseRepository expenseRepository;
 
@@ -38,7 +38,8 @@ public class ExpenseService {
     public void initDatabase () {
         System.out.println(" DB init recognized ");
 
-        expenseRepository.save(new Expense("Test", 0000.0,  "Bill"));
+        expenseRepository.save(new Expense("Test", 0000.0,  "bill"));
+        expenseRepository.save(new Expense("Test2",1222.3,"education"));
 
     }
 
@@ -46,15 +47,10 @@ public class ExpenseService {
     @ManyToOne
     @JoinColumn(name = "__User.id")
      public List<Expense> getExpensesList () {
-         return Expenses;
+         return expenseRepository.findAll();
      }
 
-     public Expense create (Expense entry) {
-         List<Expense> extend = new ArrayList<>(Expenses);
-         extend.add(entry);
-         this.Expenses = List.copyOf(extend);
-         return entry;
-     }
+
 
 
 
@@ -105,6 +101,32 @@ public class ExpenseService {
         }
 
     }
+
+
+    public List<Expense> searchBarFunc (SearchDTO.ExpenseSearchDTO search) {
+
+        Expense probe = new Expense();
+
+        if (StringUtils.hasText(search.name())) {
+            //Specify the fields of interest
+            probe.setExpenseName(search.name());
+            probe.setExpenseType(search.type());
+        }
+
+        // let's wrap the probe
+
+        Example<Expense> example = Example.of(probe,
+                ExampleMatcher.matchingAny()
+                        .withIgnoreCase()
+                        . withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING)
+        );
+        return expenseRepository.findAll(example);
+
+
+    }
+
+
+
      
 
 

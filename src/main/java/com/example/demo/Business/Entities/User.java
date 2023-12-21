@@ -24,9 +24,7 @@ public non-sealed class User extends EntitiesFields {
 
 
     // User Entity constructor with params
-    public User (String name , double
-
- number ) {
+    public User (String name , double number ) {
         this.name = name;
         this.number = number;
     }

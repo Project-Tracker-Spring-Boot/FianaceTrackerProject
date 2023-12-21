@@ -1,55 +1,74 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org" xmlns:Name="http://www.w3.org/1999/xhtml">
 <head>
     <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="../static/css/Home.css" th:href="@{../static/css/Home.css}" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" charset="UTF-8" />
+    <link rel="stylesheet"  type="text/css" th:href="@{/css/Home.css}"    />
+    <link href="/css/Home.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
 <header style="text-align: center">
-    <h1 th:utext="${name}">Welcome</h1>
+    <h1>Welcome <span th:text="${name}"></span></h1> <h1>Finance Tracker</h1>
 
 
 </header>
 
-<h1>Finance Tracker</h1>
-<div class="finance-form">
+<div class="finance-form" th:object="${add-entry}">
+    <form action="/" th:action="@{/}" method="post">
     <label for="description">Description:</label>
-    <input type="text" id="description" name="description" required>
+    <input type="text" id="description" name="description" required  th:field="*{add-entry.name}">
     <br>
     <label for="amount">Amount:</label>
-    <input type="number" id="amount" name="amount" min="0" step="0.01" required>
+    <input type="number" id="amount" name="amount" min="0" step="0.01" required  th:field="*{add-entry.cost}">
     <br>
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date" required>
+<!--    <label for="date">Date:</label>-->
+<!--    <input type="date" id="date" name="date" required>-->
     <br>
-    <label for="category">Category:</label>
+    <label for="type">Type:</label>
 
 <!--    To be Replaced by type of expense -->
-    <select id="category" name="category">
-        <option value="income">Income</option>
-        <option value="expense">Expense</option>
+    <select id="type" name="type" th:field="${add-entry}">
+        <option value="bill">Bill</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="education">Education</option>
+        <option value="travel">Travel</option>
     </select>
 
 <!--    Need to add an option for User income -->
     <br>
-    <button type="submit">Add</button>
+    <button type="submit" id="/">Add</button>
+    </form>
 </div>
 <h2>Transactions</h2>
-<table>
-    <thead>
-    <tr>
-        <th>Date</th>
-        <th>Description</th>
-        <th>Amount</th>
-        <th>Category</th>
-    </tr>
-    </thead>
-    <tbody id="transactions">
-    <!-- transactions will be dynamically added here -->
-    </tbody>
-</table>
+
+<form action="/expense-list" th:action="@{/expense-list}" th:object="${expenseListModel}" method="GET" >
+
+    <input type="text" method="POST" name="search-name"th:object="${expenseSearchModel}">
+    <button type="submit" id="search-name">Search</button>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Category</th>
+        </tr>
+        </thead>
+
+        <tr th:each="expense: ${expenseListModel}">
+            <td th:text="${expense.getExpenseName}">Name:</td>
+            <td th:text="${expense.getExpenseCost}">Cost: </td>
+            <td th:text="${expense.getExpenseDate}">Date:</td>
+            <td th:text="${expense.getExpenseType}">Type:</td>
+        </tr>
+
+        <tbody id="transactions">
+        <!-- transactions will be dynamically added here -->
+        </tbody>
+    </table>
+</form>
 
 
 

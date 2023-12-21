@@ -18,7 +18,7 @@ public interface ExpenseRepository extends JpaRepository <Expense , Long>  {
     public List<Expense> findByNumber (double number);
 
 
-    public List<Expense> findByDate(Timestamp startDate);
+    public List<Expense> findByDate(Date date);
 
 
 

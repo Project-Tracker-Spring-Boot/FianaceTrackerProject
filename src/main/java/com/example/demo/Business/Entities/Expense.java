@@ -1,6 +1,7 @@
 package com.example.demo.Business.Entities;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.context.annotation.ComponentScan;
 
 import java.sql.Timestamp;
@@ -13,7 +14,9 @@ import java.util.Date;
 public non-sealed class Expense extends EntitiesFields {
    private String type;
     @Temporal(TemporalType.TIMESTAMP)
-    private Timestamp date;
+    @Column(nullable = false, updatable = false)
+    @CreationTimestamp
+    private Date date ;
 
 
 
@@ -33,7 +36,7 @@ public non-sealed class Expense extends EntitiesFields {
 
        this.name = name;
        this.number = cost;
-       this.date = new Timestamp(date.getTime());
+       this.date = new Date();
        this.type = type;
        this.id = null;
     }
@@ -56,15 +59,11 @@ public non-sealed class Expense extends EntitiesFields {
 
 
 
-    public double
-
- getExpenseCost () {
+    public double getExpenseCost () {
         return this.number;
     }
 
-    public void setExpenseCost(double
-
- cost) {
+    public void setExpenseCost(double cost) {
         this.number = cost;
     }
 
@@ -72,15 +71,21 @@ public non-sealed class Expense extends EntitiesFields {
        return this.type;
    }
 
-   public void  setExpenseType(String type) {
+   public void setExpenseType(String type) {
        this.type = type;
    }
 
 
    public Long getExpenseId() { return this.id; }
 
-    public Timestamp getDate () {
+    public Date getDate () {
        return this.date;
+    }
+
+
+    @Override
+    public String toString() {
+       return "[Name: "+ this.getExpenseName() + " Cost: "+ this.getExpenseCost() + " Type: " + this.getExpenseType() + "]";
     }
 
 }
