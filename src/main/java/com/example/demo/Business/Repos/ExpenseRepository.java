@@ -15,8 +15,7 @@ public interface ExpenseRepository extends JpaRepository <Expense , Long>  {
 
     public List<Expense>findByNameContainsAllIgnoreCase(String name);
 
-    public List<Expense> findByNumber (double number);
-
+    public List<Expense> findByNumber (Double number);
 
     public List<Expense> findByDate(Date date);
 

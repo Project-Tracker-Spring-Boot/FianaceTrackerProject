@@ -38,8 +38,8 @@ public class ExpenseService {
     public void initDatabase () {
         System.out.println(" DB init recognized ");
 
-        expenseRepository.save(new Expense("Test", 0000.0,  "bill"));
-        expenseRepository.save(new Expense("Test2",1222.3,"education"));
+        expenseRepository.save(new Expense("Test", 0000.0, Expense.TYPE.Bill));
+        expenseRepository.save(new Expense("Ben",1222.3,Expense.TYPE.Education));
 
     }
 
@@ -55,11 +55,11 @@ public class ExpenseService {
 
 
      // Add Expense method using the Entry DTO
-     public boolean addExpense(EntryDTO.ExpenseEntryDTO entryDTO ) {
+     public Expense addExpense(EntryDTO.ExpenseEntryDTO entryDTO) {
 
        Expense entry = new Expense(entryDTO.name(), entryDTO.cost(), entryDTO.type());
-       expenseRepository.save(entry);
-       return true;
+       return expenseRepository.save(entry);
+
 
 
      }
@@ -71,36 +71,7 @@ public class ExpenseService {
 
 
 // Adding the search operation to the Expense Service
-    public List<Expense> searchExpense(SearchDTO.ExpenseSearchDTO entry){
-       Expense probe = new Expense();
-        // code for if user only searched for name of expense
-        if (StringUtils.hasText(entry.name())) {
-            return expenseRepository.findByNameContainsAllIgnoreCase(entry.name());
-        }
-        // code for if we are searching for cost of expense
-        else if (!(entry.cost() == 0)) {
 
-            return expenseRepository.findByNumber(entry.cost());
-
-        }
-
-        //code for if we are searching for the date of expense
-
-        else if (Objects.nonNull(entry.date())) {
-           return  expenseRepository.findByDate( entry.date());
-        }
-
-        // code for searching by type
-        else if (StringUtils.hasText(entry.type())){
-            return expenseRepository.findByNameContainsAllIgnoreCase(entry.type());
-        }
-
-        // If nothing is entered then ...
-        else {
-            return Collections.emptyList();
-        }
-
-    }
 
 
     public List<Expense> searchBarFunc (SearchDTO.ExpenseSearchDTO search) {
@@ -124,11 +95,5 @@ public class ExpenseService {
 
 
     }
-
-
-
-     
-
-
 
 }

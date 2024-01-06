@@ -12,7 +12,7 @@ import java.util.Date;
 @ComponentScan(" com.example.demo.Business.EntitiesFields")
 @Table(name="__Expense")
 public non-sealed class Expense extends EntitiesFields {
-   private String type;
+   private TYPE type;
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, updatable = false)
     @CreationTimestamp
@@ -32,7 +32,7 @@ public non-sealed class Expense extends EntitiesFields {
 
    // Constructor with params
 
-    public Expense (String name , double cost , String type) {
+    public Expense (String name , Double cost , TYPE type) {
 
        this.name = name;
        this.number = cost;
@@ -59,19 +59,19 @@ public non-sealed class Expense extends EntitiesFields {
 
 
 
-    public double getExpenseCost () {
+    public Double getExpenseCost () {
         return this.number;
     }
 
-    public void setExpenseCost(double cost) {
+    public void setExpenseCost(Double cost) {
         this.number = cost;
     }
 
-   public String getExpenseType() {
+   public TYPE getExpenseType() {
        return this.type;
    }
 
-   public void setExpenseType(String type) {
+   public void setExpenseType(Expense.TYPE type) {
        this.type = type;
    }
 
@@ -80,6 +80,25 @@ public non-sealed class Expense extends EntitiesFields {
 
     public Date getDate () {
        return this.date;
+    }
+
+
+    public enum TYPE {
+
+        Bill {
+            @Override
+            public String toString(){return "Bill"; }
+        }, Entertainment {
+            @Override
+            public String toString () {return "Entertainment";}
+        }, Education{
+            @Override
+            public String toString() { return "Education" ;}
+        }, Travel {
+            @Override
+            public String toString () { return  "Travel"; }
+        }
+
     }
 
 

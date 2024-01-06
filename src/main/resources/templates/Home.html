@@ -1,50 +1,48 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org" xmlns:Name="http://www.w3.org/1999/xhtml">
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
     <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" charset="UTF-8" />
-    <link rel="stylesheet"  type="text/css" th:href="@{/css/Home.css}"    />
+    <meta http-equiv="Content-Type" content="text/html;" charset="UTF-8" />
+    <link rel="stylesheet"  type="text/css" th:href="@{/css/Home.css}" />
     <link href="/css/Home.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
-<header style="text-align: center">
-    <h1>Welcome <span th:text="${name}"></span></h1> <h1>Finance Tracker</h1>
+    <header style="text-align: center">
+        <h1>Welcome <span th:text="${name}"></span></h1> <h1>Finance Tracker</h1>
+    </header>
+    <section>
+        <form th:action="@{/Submit}" name="add-expense" th:object="${expenseInfo}" method="POST">
+
+                <label for="name">Description:</label>
+                <input required type="text" id="name"  th:field="*{name}" placeholder="Please enter expense" />
+
+                <label for="number">Amount:</label>
+                <input required type="number" min="0.00" step="0.01" id="number"  th:field="*{number}" placeholder="Please enter cost" />
 
 
-</header>
 
-<div class="finance-form" th:object="${add-entry}">
-    <form action="/" th:action="@{/}" method="post">
-    <label for="description">Description:</label>
-    <input type="text" id="description" name="description" required  th:field="*{add-entry.name}">
-    <br>
-    <label for="amount">Amount:</label>
-    <input type="number" id="amount" name="amount" min="0" step="0.01" required  th:field="*{add-entry.cost}">
-    <br>
-<!--    <label for="date">Date:</label>-->
-<!--    <input type="date" id="date" name="date" required>-->
-    <br>
-    <label for="type">Type:</label>
+                <label for="type"> Type:</label>
+                <select id="type" required th:field="*{type}" class="form-control">
+                    <option value="" hidden="hidden">Select an option</option>
+                    <option th:each="type : ${expenseInfoTypes}"
+                            th:value="*{type}"
+                            th:text="${type.toString}">
+                </select>
 
-<!--    To be Replaced by type of expense -->
-    <select id="type" name="type" th:field="${add-entry}">
-        <option value="bill">Bill</option>
-        <option value="entertainment">Entertainment</option>
-        <option value="education">Education</option>
-        <option value="travel">Travel</option>
-    </select>
+                <br>
 
-<!--    Need to add an option for User income -->
-    <br>
-    <button type="submit" id="/">Add</button>
-    </form>
-</div>
-<h2>Transactions</h2>
+                <button type="submit">Add</button>
 
-<form action="/expense-list" th:action="@{/expense-list}" th:object="${expenseListModel}" method="GET" >
+        </form>
 
-    <input type="text" method="POST" name="search-name"th:object="${expenseSearchModel}">
+    </section>
+
+    <h2>Transactions</h2>
+
+    <form action="/expense-list" th:action="@{/expense-list}" th:object="${expenseListModel}" method="GET" >
+
+    <input type="text" method="POST" name="search-name" th:object="${expenseSearchModel}">
     <button type="submit" id="search-name">Search</button>
 
     <table>
