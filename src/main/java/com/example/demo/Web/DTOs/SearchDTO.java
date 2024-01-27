@@ -12,6 +12,8 @@ public class SearchDTO {
     // Expense DTO used to transmit data meant for expense ops from front end HTML to Back end java
     public record ExpenseSearchDTO  (String name, Double cost , Date date, Expense.TYPE type){ }
 
+    public record UserSearchDTO (String name , Double income, Long id ) { }
+
 
 
 }

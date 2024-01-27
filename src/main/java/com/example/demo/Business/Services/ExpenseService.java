@@ -55,7 +55,9 @@ public class ExpenseService {
 
 
      // Add Expense method using the Entry DTO
-     public Expense addExpense(EntryDTO.ExpenseEntryDTO entryDTO) {
+
+    @ManyToOne
+    public Expense addExpense(EntryDTO.ExpenseEntryDTO entryDTO) {
 
        Expense entry = new Expense(entryDTO.name(), entryDTO.cost(), entryDTO.type());
        return expenseRepository.save(entry);

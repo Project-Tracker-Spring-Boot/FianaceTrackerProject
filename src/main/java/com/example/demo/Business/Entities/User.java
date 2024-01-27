@@ -3,6 +3,8 @@ package com.example.demo.Business.Entities;
 import jakarta.persistence.*;
 import org.springframework.context.annotation.ComponentScan;
 
+import java.util.Objects;
+
 @Entity
 @ComponentScan(" com.example.demo.Business.EntitiesFields")
 @Table(name="__User")
@@ -57,9 +59,33 @@ public non-sealed class User extends EntitiesFields {
         return this.number;
     }
 
-    public void setUserIncome(double
-
- income) {
+    public void setUserIncome(double income) {
         this.number = income;
     }
+
+
+    @Override
+    public boolean equals (Object o) {
+        if (this == o) return true;
+
+        if (o == null || this.getClass()!= o.getClass()) return false;
+
+        User user  = (User)o;
+
+        return Objects.equals(this.id,user.id) && Objects.equals(this.name, user.name)
+                && Objects.equals(this.number, user.number);
+    }
+
+
+    @Override
+    public int hashCode () {
+        return Objects.hash(this.id,this.name,this.number);
+    }
+
+
+    @Override
+    public String toString() {
+        return  "User{" +"id=" + id + " ,name=" + this.name + " + Income " + this.number + " }";
+    }
+
 }

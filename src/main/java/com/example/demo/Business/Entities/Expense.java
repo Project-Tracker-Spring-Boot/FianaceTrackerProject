@@ -7,12 +7,13 @@ import org.springframework.context.annotation.ComponentScan;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Objects;
 
 @Entity
 @ComponentScan(" com.example.demo.Business.EntitiesFields")
 @Table(name="__Expense")
 public non-sealed class Expense extends EntitiesFields {
-   private TYPE type;
+   public TYPE type;
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, updatable = false)
     @CreationTimestamp
@@ -100,6 +101,27 @@ public non-sealed class Expense extends EntitiesFields {
         }
 
     }
+
+    @Override
+    public boolean equals (Object o) {
+        if (this == o) return true;
+
+        if (o == null || this.getClass()!= o.getClass()) return false;
+
+        Expense expense  = (Expense)o;
+
+        return Objects.equals(this.id,expense.id) && Objects.equals(this.name, expense.name)
+                && Objects.equals(this.number, expense.number)
+                && Objects.equals(this.date, expense.date)
+                && Objects.equals(this.type, expense.type);
+    }
+
+
+    @Override
+    public int hashCode () {
+        return Objects.hash(this.id,this.name,this.number, this.date,this.type);
+    }
+
 
 
     @Override

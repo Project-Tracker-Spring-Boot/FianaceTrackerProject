@@ -9,25 +9,25 @@
 </head>
 <body>
     <header style="text-align: center">
-        <h1>Welcome <span th:text="${name}"></span></h1> <h1>Finance Tracker</h1>
+        <h1>Welcome</h1> <h1>Finance Tracker</h1>
     </header>
     <section>
-        <form th:action="@{/Submit}" name="add-expense" th:object="${expenseInfo}" method="POST">
+        <form action="#" th:action="@{/show-form}" name="add-expense" th:object="${Expense}" method="POST">
 
                 <label for="name">Description:</label>
-                <input required type="text" id="name"  th:field="*{name}" placeholder="Please enter expense" />
+                <input required type="text" id="name"  th:action="${setExpenseName}" placeholder="Please enter expense" />
 
                 <label for="number">Amount:</label>
-                <input required type="number" min="0.00" step="0.01" id="number"  th:field="*{number}" placeholder="Please enter cost" />
+                <input required type="number" min="0.00" step="0.01" id="number"  th:action="${setExpenseCost}" placeholder="Please enter cost" />
 
 
 
                 <label for="type"> Type:</label>
-                <select id="type" required th:field="*{type}" class="form-control">
+                <select id="type" required th:action="${setExpenseType}" class="form-control">
                     <option value="" hidden="hidden">Select an option</option>
-                    <option th:each="type : ${expenseInfoTypes}"
+                    <option th:each="type : ${typeList}"
                             th:value="*{type}"
-                            th:text="${type.toString}">
+                            th:text="${type}">
                 </select>
 
                 <br>

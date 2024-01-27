@@ -7,6 +7,7 @@ import com.example.demo.Web.DTOs.SearchDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -15,7 +16,6 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping
 public class ExpenseController {
 
 
@@ -35,15 +35,15 @@ public class ExpenseController {
     }
 
 
-    @GetMapping("/Submit")
+    @GetMapping("/show-form")
     public String showExpenseForm (Model model) {
 
-        Expense expenseInfo =  new Expense();
-        model.addAttribute("expenseInfo", expenseInfo);
 
-        List<Expense.TYPE> expenseTypes = Arrays.asList(Expense.TYPE.Bill, Expense.TYPE.Education, Expense.TYPE.Entertainment, Expense.TYPE.Travel);
+        model.addAttribute("Expense", new Expense());
 
-        model.addAttribute("expenseInfoTypes", expenseTypes);
+        List<Expense.TYPE> typeList = Arrays.asList(Expense.TYPE.Bill, Expense.TYPE.Education, Expense.TYPE.Travel, Expense.TYPE.Entertainment);
+
+        model.addAttribute("typeList", typeList);
 
 
 
@@ -54,15 +54,19 @@ public class ExpenseController {
 
     }
 
-    @PostMapping("/Submit")
-    public String addUserExpense (@RequestParam @ModelAttribute("expenseInfo") Expense expenseInfo, @RequestParam("expenseInfoType") Expense.TYPE expenseTypes, Model model) {
+    @PostMapping("/shpw-form")
+    public String addUserExpense (@ModelAttribute("Expense") Expense expenseInfo, BindingResult bindingResult) {
+
+        if (bindingResult.hasErrors()){
+            return "Home";
+        }
 
         EntryDTO.ExpenseEntryDTO entryDTO = new EntryDTO.ExpenseEntryDTO(expenseInfo.getExpenseName(), expenseInfo.getExpenseCost(), expenseInfo.getExpenseType());
 
         expenseService.addExpense(entryDTO);
 
 
-        return "redirect:/Home";
+        return "redirect:/show-form";
 
     }
 
