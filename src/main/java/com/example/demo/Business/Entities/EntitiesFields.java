@@ -3,6 +3,7 @@ package com.example.demo.Business.Entities;
 import jakarta.persistence.*;
 
 @MappedSuperclass
+@Inheritance
 abstract sealed class EntitiesFields permits User, Expense  {
      protected String name;
      protected double number;

@@ -4,8 +4,7 @@ import com.example.demo.Business.Entities.Expense;
 
 
 import com.example.demo.Business.Repos.ExpenseRepository;
-import com.example.demo.Web.DTOs.EntryDTO;
-import com.example.demo.Web.DTOs.SearchDTO;
+import com.example.demo.Web.DTOs.ExpenseEntryDTO;
 import jakarta.annotation.PostConstruct;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -15,7 +14,6 @@ import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import java.time.LocalDate;
 import java.util.*;
 
 
@@ -39,7 +37,7 @@ public class ExpenseService {
         System.out.println(" DB init recognized ");
 
         expenseRepository.save(new Expense("Test", 0000.0, Expense.TYPE.Bill));
-        expenseRepository.save(new Expense("Ben",1222.3,Expense.TYPE.Education));
+
 
     }
 
@@ -57,12 +55,23 @@ public class ExpenseService {
      // Add Expense method using the Entry DTO
 
     @ManyToOne
-    public Expense addExpense(EntryDTO.ExpenseEntryDTO entryDTO) {
+    public Expense addExpense(ExpenseEntryDTO entryDTO) {
 
-       Expense entry = new Expense(entryDTO.name(), entryDTO.cost(), entryDTO.type());
+       Expense entry = new Expense(entryDTO.getName(), entryDTO.getCost(), entryDTO.getType());
        return expenseRepository.save(entry);
 
 
+
+     }
+
+
+     public void removeExpense (Long expenseID ) {
+
+        expenseRepository.findById(expenseID)
+                .map(expense -> {
+                    expenseRepository.delete(expense);
+                    return true;
+                }).orElseThrow(() -> new RuntimeException("Expense could not be deleted " + expenseID));
 
      }
 
@@ -76,26 +85,15 @@ public class ExpenseService {
 
 
 
-    public List<Expense> searchBarFunc (SearchDTO.ExpenseSearchDTO search) {
+    public List<Expense> getByKeyword (String keyword ) {
 
-        Expense probe = new Expense();
-
-        if (StringUtils.hasText(search.name())) {
-            //Specify the fields of interest
-            probe.setExpenseName(search.name());
-            probe.setExpenseType(search.type());
-        }
-
-        // let's wrap the probe
-
-        Example<Expense> example = Example.of(probe,
-                ExampleMatcher.matchingAny()
-                        .withIgnoreCase()
-                        . withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING)
-        );
-        return expenseRepository.findAll(example);
-
-
+        return expenseRepository.findByKeyword(keyword);
     }
+
+
+    public List<Expense> getAllExpenses () {
+        return expenseRepository.findAll();
+    }
+
 
 }

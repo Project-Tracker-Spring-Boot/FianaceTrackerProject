@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>FinTrack: Fianance tracker </title>
     <meta http-equiv="Content-Type" content="text/html;" charset="UTF-8" />
     <link rel="stylesheet"  type="text/css" th:href="@{/css/Home.css}" />
     <link href="/css/Home.css" rel="stylesheet" type="text/css">
@@ -12,64 +12,70 @@
         <h1>Welcome</h1> <h1>Finance Tracker</h1>
     </header>
     <section>
-        <form action="#" th:action="@{/show-form}" name="add-expense" th:object="${Expense}" method="POST">
+        <form action="#" th:action="@{/}"  th:object="${EntryExpenseDTO}" method="POST">
 
                 <label for="name">Description:</label>
-                <input required type="text" id="name"  th:action="${setExpenseName}" placeholder="Please enter expense" />
+                <input required type="text" id="name"  th:field="*{name}" placeholder="Please enter expense" />
 
                 <label for="number">Amount:</label>
-                <input required type="number" min="0.00" step="0.01" id="number"  th:action="${setExpenseCost}" placeholder="Please enter cost" />
+                <input required type="number" min="0.00" step="0.01" id="number"  th:field="*{cost}" placeholder="Please enter cost" />
 
 
 
                 <label for="type"> Type:</label>
-                <select id="type" required th:action="${setExpenseType}" class="form-control">
+                <select id="type" required th:field="*{type}" class="form-control">
                     <option value="" hidden="hidden">Select an option</option>
-                    <option th:each="type : ${typeList}"
-                            th:value="*{type}"
+                    <option th:each="type  : ${T(com.example.demo.Business.Entities.Expense.TYPE).values()}"
+                            th:value="${type}"
                             th:text="${type}">
                 </select>
 
                 <br>
 
+            <form method="post" th:action="@{/}" th:object="${EntryExpenseDTO}">
+
                 <button type="submit">Add</button>
+            </form>
+
+
 
         </form>
 
     </section>
 
-    <h2>Transactions</h2>
+    <form method="get" th:action="@{/search}" th:object="${ExpenseEntryDTO}">
+        <h2>Transactions</h2>
 
-    <form action="/expense-list" th:action="@{/expense-list}" th:object="${expenseListModel}" method="GET" >
+        <input type="text" name="keyword"  th:value="${keyword}" >
+        <button type="submit" id="keyword">Search</button>
 
-    <input type="text" method="POST" name="search-name" th:object="${expenseSearchModel}">
-    <button type="submit" id="search-name">Search</button>
 
-    <table>
-        <thead>
-        <tr>
-            <th>Date</th>
-            <th>Description</th>
-            <th>Amount</th>
-            <th>Category</th>
-        </tr>
-        </thead>
-
-        <tr th:each="expense: ${expenseListModel}">
-            <td th:text="${expense.getExpenseName}">Name:</td>
-            <td th:text="${expense.getExpenseCost}">Cost: </td>
-            <td th:text="${expense.getExpenseDate}">Date:</td>
-            <td th:text="${expense.getExpenseType}">Type:</td>
-        </tr>
-
-        <tbody id="transactions">
-        <!-- transactions will be dynamically added here -->
-        </tbody>
-    </table>
-</form>
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Date</th>
+                <th>Type</th>
+            </tr>
+            </thead>
 
 
 
+            <tbody>
+            <!-- transactions will be dynamically added here -->
+            <tr th:each="expense: ${list}">
+                <td th:text="${expense.getExpenseName}">Name:</td>
+                <td th:text="${expense.getExpenseCost}">Cost: </td>
+                <td th:text="${expense.getExpenseDate}">Date:</td>
+                <td th:text="${expense.getExpenseType}">Type:</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+    </form>
 
 </body>
 </html>

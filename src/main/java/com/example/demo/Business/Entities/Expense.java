@@ -99,7 +99,6 @@ public non-sealed class Expense extends EntitiesFields {
             @Override
             public String toString () { return  "Travel"; }
         }
-
     }
 
     @Override
@@ -128,5 +127,6 @@ public non-sealed class Expense extends EntitiesFields {
     public String toString() {
        return "[Name: "+ this.getExpenseName() + " Cost: "+ this.getExpenseCost() + " Type: " + this.getExpenseType() + "]";
     }
+
 
 }

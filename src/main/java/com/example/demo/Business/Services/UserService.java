@@ -1,11 +1,7 @@
 package com.example.demo.Business.Services;
 
-import com.example.demo.Business.Entities.Expense;
 import com.example.demo.Business.Entities.User;
 import com.example.demo.Business.Repos.UserRepository;
-import com.example.demo.Business.Repos.UserRepository;
-import com.example.demo.Web.DTOs.EntryDTO;
-import com.example.demo.Web.DTOs.SearchDTO;
 import jakarta.persistence.OneToMany;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -24,9 +20,7 @@ public class UserService {
     public  UserService (UserRepository userRepo) { this.userRepository = userRepo;  }
 
 
-    public void addUser(EntryDTO.UserEntryDTO entry ) {
-        userRepository.save(new User(entry.name(), entry.income()));
-    }
+
 
 
     @OneToMany
