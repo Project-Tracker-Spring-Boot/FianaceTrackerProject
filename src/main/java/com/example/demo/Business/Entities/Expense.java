@@ -9,11 +9,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 
+import static jakarta.persistence.EnumType.*;
+
 @Entity
 @ComponentScan(" com.example.demo.Business.EntitiesFields")
 @Table(name="__Expense")
 public non-sealed class Expense extends EntitiesFields {
-   public TYPE type;
+   @Enumerated(STRING)
+    public TYPE type;
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, updatable = false)
     @CreationTimestamp
@@ -82,6 +85,7 @@ public non-sealed class Expense extends EntitiesFields {
     public Date getDate () {
        return this.date;
     }
+
 
 
     public enum TYPE {
