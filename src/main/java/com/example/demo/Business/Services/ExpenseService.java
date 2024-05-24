@@ -96,4 +96,30 @@ public class ExpenseService {
     }
 
 
+    public HashMap<String,Integer> getChartData () {
+        HashMap<String, Integer> chartData = new HashMap<String, Integer>();
+
+        int totalExpenseCount = expenseRepository.findAll().size();
+
+        int totalExpenseCountByEducation = expenseRepository.findByKeyword("Education").size();
+
+        int totalExpenseCountByEntertainment = expenseRepository.findByKeyword("Entertainment").size();
+
+        int totalExpenseCountByBill = expenseRepository.findByKeyword("Bill").size();
+
+        int totalExpenseCountByTravel = expenseRepository.findByKeyword("Travel").size();
+
+
+        chartData.put("total", totalExpenseCount);
+        chartData.put("Entertainment", totalExpenseCountByEntertainment);
+        chartData.put("Education", totalExpenseCountByEducation);
+        chartData.put("Bill", totalExpenseCountByBill);
+        chartData.put("Travel", totalExpenseCountByTravel);
+
+
+        return chartData;
+
+    }
+
+
 }

@@ -11,6 +11,19 @@ import java.util.Objects;
 public non-sealed class User extends EntitiesFields {
 
 
+
+    // User details
+
+
+    public String password;
+
+   public  String email;
+
+    public String phoneNumber;
+
+
+
+
     // User only field ID  the @GeneratedValue ask spring to auto populate the values
 
 

@@ -21,31 +21,6 @@ public class UserService {
 
 
 
-
-
-    @OneToMany
-    public User getUser(String name) {
-        User probe = new User();
-
-        if (StringUtils.hasText(name)) {
-            //Specify the fields of interest
-            probe.setUserName(name);
-
-        }
-        Example<User> example = Example.of(probe,
-                ExampleMatcher.matchingAny()
-                        .withIgnoreCase()
-                        . withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING)
-        );
-
-
-        return userRepository.findByNameContainsAllIgnoreCase(example);
-
-
-
-    }
-
-
     @OneToMany
     public Optional<User> getUser(Long id ) {
 
@@ -54,6 +29,22 @@ public class UserService {
         return probe;
     }
 
+
+
+    public String  changePassword (String value , User user ) {
+
+        user.password = value;
+
+        return "Password has been changed";
+
+
+    }
+
+    public String getEmail (User user) {
+        return  user.email;
+
+
+    }
 
 
 
