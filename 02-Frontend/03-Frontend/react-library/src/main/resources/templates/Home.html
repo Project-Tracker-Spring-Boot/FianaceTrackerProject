@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html;" charset="UTF-8" />
+    <link rel="stylesheet"  type="text/css" th:href="@{/css/Home.css}" />
+    <link href="/css/Home.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <header style="text-align: center">
+        <h1>Welcome <span th:text="${name}"></span></h1> <h1>Finance Tracker</h1>
+    </header>
+    <section>
+        <form th:action="@{/Submit}" name="add-expense" th:object="${expenseInfo}" method="POST">
+
+                <label for="name">Description:</label>
+                <input required type="text" id="name"  th:field="*{name}" placeholder="Please enter expense" />
+
+                <label for="number">Amount:</label>
+                <input required type="number" min="0.00" step="0.01" id="number"  th:field="*{number}" placeholder="Please enter cost" />
+
+
+
+                <label for="type"> Type:</label>
+                <select id="type" required th:field="*{type}" class="form-control">
+                    <option value="" hidden="hidden">Select an option</option>
+                    <option th:each="type : ${expenseInfoTypes}"
+                            th:value="*{type}"
+                            th:text="${type.toString}">
+                </select>
+
+                <br>
+
+                <button type="submit">Add</button>
+
+        </form>
+
+    </section>
+
+    <h2>Transactions</h2>
+
+    <form action="/expense-list" th:action="@{/expense-list}" th:object="${expenseListModel}" method="GET" >
+
+    <input type="text" method="POST" name="search-name" th:object="${expenseSearchModel}">
+    <button type="submit" id="search-name">Search</button>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Category</th>
+        </tr>
+        </thead>
+
+        <tr th:each="expense: ${expenseListModel}">
+            <td th:text="${expense.getExpenseName}">Name:</td>
+            <td th:text="${expense.getExpenseCost}">Cost: </td>
+            <td th:text="${expense.getExpenseDate}">Date:</td>
+            <td th:text="${expense.getExpenseType}">Type:</td>
+        </tr>
+
+        <tbody id="transactions">
+        <!-- transactions will be dynamically added here -->
+        </tbody>
+    </table>
+</form>
+
+
+
+
+</body>
+</html>
