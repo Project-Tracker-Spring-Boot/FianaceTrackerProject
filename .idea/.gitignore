@@ -1,3 +1,8 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+
+
+### Folder to ignore ###
+/FianaceTrackerProject/01-Backend/Archive/
