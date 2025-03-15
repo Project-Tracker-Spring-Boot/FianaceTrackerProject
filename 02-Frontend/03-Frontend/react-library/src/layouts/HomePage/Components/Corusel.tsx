@@ -1,6 +1,6 @@
 import { ReturnBook } from "./ReturnBook"
 import { useEffect , useState } from 'react';
-import  ExpenseModel from './../../Model/ExpenseModel'
+import { ExpenseModel } from './../../Model/ExpenseModel'
 import React from "react";      
 import { SpinnerLoading } from "../../Utils/SpinnerLoading";
 export const Carousel = () => {

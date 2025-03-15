@@ -36,6 +36,14 @@ body {
 background-color:#262A33  ;
 }
 
+.bg-color {
+    background-color: #fbeed7;
+}
+
+.dashboard-bg-color {
+    background-color: #b9ab98
+}
+
 
 .col-image-left {
     background-image: url("./Images/PublicImages/image-4.jpg");
@@ -48,9 +56,17 @@ background-color:#262A33  ;
 }
 
 .lost-image {
-    background-image: url("./Images/PublicImages/image-3.jpg");
+    background-image: url("./Images/FinanceTrackerImage/Dashboard.jpeg");
     height: 25em !important;
-    width: "720"
+    width: "720";
+    background-size: cover;
+}
+
+.lost-image2 {
+    background-image: url("./Images/FinanceTrackerImage/DataTable.jpeg");
+    height: 25em !important;
+    width: "720";
+    background-size: cover;
 }
 
 .homepage-carousel-title {

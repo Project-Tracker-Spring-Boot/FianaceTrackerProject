@@ -1,4 +1,4 @@
-import ExpenseModel from "../../Model/ExpenseModel";
+import { ExpenseModel }  from "../../Model/ExpenseModel";
 
 export const SearchExpense: React.FC<{ expense: ExpenseModel }> = (props) => {
     return (

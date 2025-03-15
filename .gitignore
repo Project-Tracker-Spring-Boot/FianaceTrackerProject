@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+
+### Folder to ignore ###
+/FianaceTrackerProject/01-Backend/Archive/

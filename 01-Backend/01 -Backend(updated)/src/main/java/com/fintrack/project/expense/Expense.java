@@ -14,12 +14,13 @@ import static jakarta.persistence.EnumType.STRING;
 @Setter
 @Builder
 @AllArgsConstructor
+@Table(name = "__expense")
 public class Expense {
     @Id
     @GeneratedValue
     private int id;
     private String name;
-    private double amount;
+    private double number;
     @Enumerated(STRING)
     public TYPE type;
     @Temporal(TemporalType.TIMESTAMP)

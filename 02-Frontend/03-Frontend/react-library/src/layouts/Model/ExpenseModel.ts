@@ -6,9 +6,9 @@ import  ExpenseType from './ExpenseType'
 export class ExpenseModel {
     id: number;
     name: string;
-    amount?: number;
-    type?: ExpenseType;
-    date?: Date;
+    amount: number;
+    type: ExpenseType;
+    date: Date;
 
 
 
@@ -21,5 +21,3 @@ export class ExpenseModel {
     }
 
 }
-
-export default ExpenseModel

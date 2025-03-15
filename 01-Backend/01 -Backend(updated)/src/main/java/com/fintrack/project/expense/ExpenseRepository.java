@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface ExpenseRepository extends JpaRepository<Expense,Integer> {
 
-    @Query(value = "SELECT * FROM Expense s WHERE s.name ILIKE %:keyword% OR s.type LIKE %:keyword%",
+        @Query(value = "SELECT * FROM Expense s WHERE s.name ILIKE %:keyword% OR s.type LIKE %:keyword%",
             nativeQuery = true)
     List<Expense> findByKeyword (@Param("keyword") String keyword);
 
@@ -19,4 +19,5 @@ public interface ExpenseRepository extends JpaRepository<Expense,Integer> {
             nativeQuery = true)
     void  deleteByName ( String name);
 
+    
 }

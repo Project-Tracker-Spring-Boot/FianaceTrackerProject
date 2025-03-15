@@ -1,0 +1,7189 @@
+import { Class } from "@mui/icons-material";
+import { BarDatum } from "@nivo/bar"
+
+
+
+
+
+export const MockDataBarChart : BarDatum []= [
+    {
+      "country": "Monday",
+      "hotDog": 62,
+      "hotDogColor": "hsl(6, 70%, 50%)",
+      "burger": 161,
+      "burgerColor": "hsl(145, 70%, 50%)",
+      "sandwich": 184,
+      "sandwichColor": "hsl(322, 70%, 50%)",
+      "kebab": 38,
+      "kebabColor": "hsl(325, 70%, 50%)",
+      "fries": 69,
+      "friesColor": "hsl(282, 70%, 50%)",
+      "donut": 173,
+      "donutColor": "hsl(112, 70%, 50%)"
+    },
+    {
+      "country": "Tuesday",
+      "hotDog": 149,
+      "hotDogColor": "hsl(66, 70%, 50%)",
+      "burger": 16,
+      "burgerColor": "hsl(301, 70%, 50%)",
+      "sandwich": 173,
+      "sandwichColor": "hsl(46, 70%, 50%)",
+      "kebab": 45,
+      "kebabColor": "hsl(352, 70%, 50%)",
+      "fries": 44,
+      "friesColor": "hsl(10, 70%, 50%)",
+      "donut": 58,
+      "donutColor": "hsl(130, 70%, 50%)"
+    },
+    {
+      "country": "Wednesday",
+      "hotDog": 149,
+      "hotDogColor": "hsl(170, 70%, 50%)",
+      "burger": 9,
+      "burgerColor": "hsl(342, 70%, 50%)",
+      "sandwich": 106,
+      "sandwichColor": "hsl(228, 70%, 50%)",
+      "kebab": 63,
+      "kebabColor": "hsl(89, 70%, 50%)",
+      "fries": 157,
+      "friesColor": "hsl(90, 70%, 50%)",
+      "donut": 110,
+      "donutColor": "hsl(185, 70%, 50%)"
+    },
+    {
+      "country": "Thursday",
+      "hotDog": 17,
+      "hotDogColor": "hsl(153, 70%, 50%)",
+      "burger": 104,
+      "burgerColor": "hsl(18, 70%, 50%)",
+      "sandwich": 77,
+      "sandwichColor": "hsl(245, 70%, 50%)",
+      "kebab": 140,
+      "kebabColor": "hsl(68, 70%, 50%)",
+      "fries": 14,
+      "friesColor": "hsl(230, 70%, 50%)",
+      "donut": 98,
+      "donutColor": "hsl(263, 70%, 50%)"
+    },
+    {
+      "country": "Friday",
+      "hotDog": 62,
+      "hotDogColor": "hsl(70, 70%, 50%)",
+      "burger": 61,
+      "burgerColor": "hsl(85, 70%, 50%)",
+      "sandwich": 91,
+      "sandwichColor": "hsl(198, 70%, 50%)",
+      "kebab": 124,
+      "kebabColor": "hsl(187, 70%, 50%)",
+      "fries": 177,
+      "friesColor": "hsl(33, 70%, 50%)",
+      "donut": 187,
+      "donutColor": "hsl(297, 70%, 50%)"
+    },
+    {
+      "country": "Saturday",
+      "hotDog": 19,
+      "hotDogColor": "hsl(163, 70%, 50%)",
+      "burger": 46,
+      "burgerColor": "hsl(203, 70%, 50%)",
+      "sandwich": 0,
+      "sandwichColor": "hsl(165, 70%, 50%)",
+      "kebab": 177,
+      "kebabColor": "hsl(254, 70%, 50%)",
+      "fries": 44,
+      "friesColor": "hsl(160, 70%, 50%)",
+      "donut": 158,
+      "donutColor": "hsl(238, 70%, 50%)"
+    },
+    {
+      "country": "Sunday",
+      "hotDog": 102,
+      "hotDogColor": "hsl(46, 70%, 50%)",
+      "burger": 114,
+      "burgerColor": "hsl(291, 70%, 50%)",
+      "sandwich": 163,
+      "sandwichColor": "hsl(140, 70%, 50%)",
+      "kebab": 147,
+      "kebabColor": "hsl(2, 70%, 50%)",
+      "fries": 102,
+      "friesColor": "hsl(190, 70%, 50%)",
+      "donut": 79,
+      "donutColor": "hsl(85, 70%, 50%)"
+    }
+  ]
+
+
+  export const MockExpenseDataBarChart : BarDatum [] = [
+    {
+        "id": 1,
+        "name": "Schuppe-Runolfsson",
+        "amount": 503.45,
+        "date": "7/11/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 2,
+        "name": "Gerhold-Breitenberg",
+        "amount": 289.26,
+        "date": "7/15/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 3,
+        "name": "Beier-Effertz",
+        "amount": 647.78,
+        "date": "7/9/2023",
+        "type": "Education"
+    },
+    {
+        "id": 4,
+        "name": "Bode-Howe",
+        "amount": 285.37,
+        "date": "11/30/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 5,
+        "name": "Hauck LLC",
+        "amount": 63.67,
+        "date": "7/20/2023",
+        "type": "Education"
+    },
+    {
+        "id": 6,
+        "name": "Tromp LLC",
+        "amount": 346.4,
+        "date": "11/9/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 7,
+        "name": "Schmeler-Stark",
+        "amount": 701.03,
+        "date": "8/9/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 8,
+        "name": "Runte, Murphy and Berge",
+        "amount": 672.1,
+        "date": "12/15/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 9,
+        "name": "Hermann-Pfannerstill",
+        "amount": 952.06,
+        "date": "10/29/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 10,
+        "name": "Kshlerin Group",
+        "amount": 834.52,
+        "date": "5/22/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 11,
+        "name": "Shanahan Inc",
+        "amount": 775.08,
+        "date": "10/3/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 12,
+        "name": "Sporer-Sipes",
+        "amount": 909.24,
+        "date": "7/2/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 13,
+        "name": "Barton, Konopelski and Kshlerin",
+        "amount": 748.69,
+        "date": "12/25/2023",
+        "type": "Education"
+    },
+    {
+        "id": 14,
+        "name": "Thiel-Konopelski",
+        "amount": 105.56,
+        "date": "10/21/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 15,
+        "name": "Casper-Bernhard",
+        "amount": 620.36,
+        "date": "8/19/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 16,
+        "name": "Nicolas, Bradtke and Dooley",
+        "amount": 350.79,
+        "date": "5/18/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 17,
+        "name": "Schoen-Wilkinson",
+        "amount": 676.87,
+        "date": "11/4/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 18,
+        "name": "Jakubowski-Hauck",
+        "amount": 152.36,
+        "date": "2/1/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 19,
+        "name": "Huels and Sons",
+        "amount": 278.94,
+        "date": "4/8/2024",
+        "type": "Education"
+    },
+    {
+        "id": 20,
+        "name": "Breitenberg-Jacobson",
+        "amount": 358.26,
+        "date": "6/1/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 21,
+        "name": "Carroll Group",
+        "amount": 176.31,
+        "date": "1/5/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 22,
+        "name": "Grant-Bergnaum",
+        "amount": 362.19,
+        "date": "11/8/2023",
+        "type": "Education"
+    },
+    {
+        "id": 23,
+        "name": "Zemlak-Legros",
+        "amount": 439.45,
+        "date": "1/23/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 24,
+        "name": "Nader-Pfannerstill",
+        "amount": 987.56,
+        "date": "8/29/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 25,
+        "name": "Grant, Rutherford and O'Conner",
+        "amount": 218.07,
+        "date": "6/9/2024",
+        "type": "Education"
+    },
+    {
+        "id": 26,
+        "name": "Nicolas and Sons",
+        "amount": 485.07,
+        "date": "8/12/2023",
+        "type": "Education"
+    },
+    {
+        "id": 27,
+        "name": "Toy LLC",
+        "amount": 872.07,
+        "date": "8/23/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 28,
+        "name": "Koelpin, Oberbrunner and Kessler",
+        "amount": 819.93,
+        "date": "1/2/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 29,
+        "name": "Herzog-Lehner",
+        "amount": 698.72,
+        "date": "12/12/2023",
+        "type": "Education"
+    },
+    {
+        "id": 30,
+        "name": "Schamberger Group",
+        "amount": 827.7,
+        "date": "1/19/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 31,
+        "name": "Ratke, Wilderman and Hodkiewicz",
+        "amount": 801.52,
+        "date": "10/10/2023",
+        "type": "Education"
+    },
+    {
+        "id": 32,
+        "name": "Hegmann-Runte",
+        "amount": 774.23,
+        "date": "4/22/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 33,
+        "name": "Daniel, Christiansen and Schumm",
+        "amount": 788.0,
+        "date": "1/21/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 34,
+        "name": "Hane and Sons",
+        "amount": 520.7,
+        "date": "3/16/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 35,
+        "name": "Graham and Sons",
+        "amount": 99.97,
+        "date": "12/25/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 36,
+        "name": "Johns-Jerde",
+        "amount": 610.68,
+        "date": "11/24/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 37,
+        "name": "Buckridge Inc",
+        "amount": 308.25,
+        "date": "4/9/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 38,
+        "name": "Hegmann-Wilderman",
+        "amount": 830.15,
+        "date": "1/27/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 39,
+        "name": "Bins Group",
+        "amount": 765.39,
+        "date": "11/10/2023",
+        "type": "Education"
+    },
+    {
+        "id": 40,
+        "name": "Stamm-Reynolds",
+        "amount": 404.5,
+        "date": "3/12/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 41,
+        "name": "Grimes and Sons",
+        "amount": 185.16,
+        "date": "5/1/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 42,
+        "name": "Mitchell-Murphy",
+        "amount": 579.31,
+        "date": "12/5/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 43,
+        "name": "Hintz-Tremblay",
+        "amount": 18.71,
+        "date": "1/8/2024",
+        "type": "Education"
+    },
+    {
+        "id": 44,
+        "name": "Ondricka Group",
+        "amount": 280.29,
+        "date": "8/5/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 45,
+        "name": "Kshlerin, Krajcik and Cruickshank",
+        "amount": 64.3,
+        "date": "6/9/2024",
+        "type": "Education"
+    },
+    {
+        "id": 46,
+        "name": "Sipes and Sons",
+        "amount": 139.15,
+        "date": "1/8/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 47,
+        "name": "Kling, Cronin and Wuckert",
+        "amount": 667.51,
+        "date": "5/31/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 48,
+        "name": "Schulist, Sporer and Leuschke",
+        "amount": 183.52,
+        "date": "1/20/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 49,
+        "name": "Morissette-Hackett",
+        "amount": 709.5,
+        "date": "8/31/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 50,
+        "name": "Bernier, Donnelly and Goyette",
+        "amount": 855.33,
+        "date": "6/11/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 51,
+        "name": "Daniel Inc",
+        "amount": 254.42,
+        "date": "9/3/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 52,
+        "name": "Abernathy Inc",
+        "amount": 215.94,
+        "date": "2/15/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 53,
+        "name": "Kerluke-Beier",
+        "amount": 974.85,
+        "date": "11/18/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 54,
+        "name": "Walsh, Effertz and Daugherty",
+        "amount": 554.52,
+        "date": "6/22/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 55,
+        "name": "Wuckert, Graham and Wisoky",
+        "amount": 986.4,
+        "date": "4/11/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 56,
+        "name": "Jacobson, Keebler and Prosacco",
+        "amount": 742.75,
+        "date": "11/3/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 57,
+        "name": "Gorczany Group",
+        "amount": 624.74,
+        "date": "11/20/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 58,
+        "name": "Rowe-Morissette",
+        "amount": 259.77,
+        "date": "12/18/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 59,
+        "name": "VonRueden, Rolfson and Schneider",
+        "amount": 341.6,
+        "date": "3/19/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 60,
+        "name": "Romaguera, Stoltenberg and Runolfsson",
+        "amount": 682.21,
+        "date": "4/19/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 61,
+        "name": "Paucek, Cole and Welch",
+        "amount": 455.47,
+        "date": "11/9/2023",
+        "type": "Education"
+    },
+    {
+        "id": 62,
+        "name": "Tremblay and Sons",
+        "amount": 397.57,
+        "date": "12/24/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 63,
+        "name": "Mohr LLC",
+        "amount": 5.45,
+        "date": "5/13/2024",
+        "type": "Education"
+    },
+    {
+        "id": 64,
+        "name": "Vandervort, Bode and Rogahn",
+        "amount": 671.86,
+        "date": "12/14/2023",
+        "type": "Education"
+    },
+    {
+        "id": 65,
+        "name": "Crooks-Emard",
+        "amount": 657.15,
+        "date": "10/5/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 66,
+        "name": "Pacocha, Breitenberg and Koelpin",
+        "amount": 189.94,
+        "date": "3/2/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 67,
+        "name": "MacGyver, Pfannerstill and Hayes",
+        "amount": 577.81,
+        "date": "10/4/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 68,
+        "name": "Becker-Zemlak",
+        "amount": 842.27,
+        "date": "1/10/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 69,
+        "name": "Crona, Kris and Raynor",
+        "amount": 406.88,
+        "date": "6/28/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 70,
+        "name": "Harris-Grimes",
+        "amount": 403.53,
+        "date": "9/21/2023",
+        "type": "Education"
+    },
+    {
+        "id": 71,
+        "name": "Rice Inc",
+        "amount": 29.46,
+        "date": "8/5/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 72,
+        "name": "Connelly, White and Johnston",
+        "amount": 820.29,
+        "date": "11/20/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 73,
+        "name": "Swift-Johnson",
+        "amount": 215.35,
+        "date": "12/21/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 74,
+        "name": "Steuber-Johnson",
+        "amount": 256.52,
+        "date": "1/29/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 75,
+        "name": "Mann Group",
+        "amount": 35.26,
+        "date": "10/15/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 76,
+        "name": "Rohan, Heaney and Torp",
+        "amount": 858.55,
+        "date": "3/9/2024",
+        "type": "Education"
+    },
+    {
+        "id": 77,
+        "name": "Hackett and Sons",
+        "amount": 73.73,
+        "date": "12/4/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 78,
+        "name": "Kertzmann and Sons",
+        "amount": 931.34,
+        "date": "8/5/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 79,
+        "name": "Medhurst, Hessel and Kunde",
+        "amount": 542.38,
+        "date": "8/3/2023",
+        "type": "Education"
+    },
+    {
+        "id": 80,
+        "name": "Balistreri-Pfeffer",
+        "amount": 700.08,
+        "date": "9/4/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 81,
+        "name": "Aufderhar and Sons",
+        "amount": 232.01,
+        "date": "11/20/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 82,
+        "name": "Quitzon-Schoen",
+        "amount": 864.38,
+        "date": "12/15/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 83,
+        "name": "O'Keefe-Monahan",
+        "amount": 477.39,
+        "date": "6/1/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 84,
+        "name": "O'Connell-Hyatt",
+        "amount": 976.64,
+        "date": "10/14/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 85,
+        "name": "Lebsack Inc",
+        "amount": 430.5,
+        "date": "4/28/2024",
+        "type": "Education"
+    },
+    {
+        "id": 86,
+        "name": "Jacobs-Gleichner",
+        "amount": 476.09,
+        "date": "6/21/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 87,
+        "name": "Konopelski-Bogan",
+        "amount": 51.58,
+        "date": "11/3/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 88,
+        "name": "Hettinger-Walsh",
+        "amount": 792.61,
+        "date": "1/14/2024",
+        "type": "Education"
+    },
+    {
+        "id": 89,
+        "name": "Dach-Schulist",
+        "amount": 826.47,
+        "date": "9/5/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 90,
+        "name": "Greenfelder-Kling",
+        "amount": 738.72,
+        "date": "8/2/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 91,
+        "name": "Dach LLC",
+        "amount": 726.52,
+        "date": "3/13/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 92,
+        "name": "Weimann LLC",
+        "amount": 274.1,
+        "date": "7/12/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 93,
+        "name": "Greenholt, Fritsch and Bechtelar",
+        "amount": 358.04,
+        "date": "9/14/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 94,
+        "name": "Rau, Kling and Baumbach",
+        "amount": 920.37,
+        "date": "10/4/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 95,
+        "name": "Kilback-Kunze",
+        "amount": 768.42,
+        "date": "12/14/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 96,
+        "name": "Schuster LLC",
+        "amount": 256.55,
+        "date": "8/7/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 97,
+        "name": "Gerhold-Rolfson",
+        "amount": 42.46,
+        "date": "1/24/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 98,
+        "name": "Kuhn Group",
+        "amount": 356.51,
+        "date": "1/3/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 99,
+        "name": "Yundt, Grant and Hand",
+        "amount": 218.59,
+        "date": "6/29/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 100,
+        "name": "McDermott-Romaguera",
+        "amount": 136.25,
+        "date": "8/28/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 101,
+        "name": "Toy-Reynolds",
+        "amount": 528.63,
+        "date": "3/7/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 102,
+        "name": "Upton-Muller",
+        "amount": 176.86,
+        "date": "2/9/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 103,
+        "name": "Schneider-Hirthe",
+        "amount": 769.78,
+        "date": "9/18/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 104,
+        "name": "Gerlach-Terry",
+        "amount": 57.69,
+        "date": "6/27/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 105,
+        "name": "Baumbach-O'Connell",
+        "amount": 75.81,
+        "date": "2/26/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 106,
+        "name": "Kilback-Shields",
+        "amount": 776.71,
+        "date": "9/26/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 107,
+        "name": "Mann, Balistreri and Dach",
+        "amount": 624.23,
+        "date": "12/3/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 108,
+        "name": "Thompson, Kshlerin and Baumbach",
+        "amount": 169.21,
+        "date": "4/4/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 109,
+        "name": "Lehner Group",
+        "amount": 310.88,
+        "date": "3/20/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 110,
+        "name": "Wilkinson-Heidenreich",
+        "amount": 344.77,
+        "date": "8/8/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 111,
+        "name": "Ratke Inc",
+        "amount": 433.47,
+        "date": "4/23/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 112,
+        "name": "Hahn, Metz and Welch",
+        "amount": 989.41,
+        "date": "9/16/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 113,
+        "name": "Mosciski-Haag",
+        "amount": 688.29,
+        "date": "2/5/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 114,
+        "name": "Bradtke Inc",
+        "amount": 514.53,
+        "date": "10/14/2023",
+        "type": "Education"
+    },
+    {
+        "id": 115,
+        "name": "Hagenes-Morissette",
+        "amount": 189.06,
+        "date": "7/16/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 116,
+        "name": "Aufderhar LLC",
+        "amount": 364.53,
+        "date": "5/6/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 117,
+        "name": "Cole-Greenfelder",
+        "amount": 568.58,
+        "date": "10/21/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 118,
+        "name": "Quigley-Will",
+        "amount": 204.11,
+        "date": "10/22/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 119,
+        "name": "Stoltenberg-Osinski",
+        "amount": 639.8,
+        "date": "12/9/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 120,
+        "name": "Lemke, Tromp and Greenfelder",
+        "amount": 302.54,
+        "date": "3/12/2024",
+        "type": "Education"
+    },
+    {
+        "id": 121,
+        "name": "Reichel Inc",
+        "amount": 433.54,
+        "date": "6/3/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 122,
+        "name": "Feil, Bednar and Block",
+        "amount": 616.31,
+        "date": "10/31/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 123,
+        "name": "Ratke LLC",
+        "amount": 978.74,
+        "date": "9/22/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 124,
+        "name": "Konopelski, Goldner and Kuvalis",
+        "amount": 444.12,
+        "date": "9/28/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 125,
+        "name": "Herzog-Koch",
+        "amount": 68.35,
+        "date": "2/6/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 126,
+        "name": "Connelly Inc",
+        "amount": 290.36,
+        "date": "6/29/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 127,
+        "name": "Deckow-Crooks",
+        "amount": 773.82,
+        "date": "8/27/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 128,
+        "name": "Tremblay-Jakubowski",
+        "amount": 330.44,
+        "date": "1/27/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 129,
+        "name": "Greenholt, Howe and Douglas",
+        "amount": 932.7,
+        "date": "9/13/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 130,
+        "name": "Runte, Murazik and Pouros",
+        "amount": 733.15,
+        "date": "4/12/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 131,
+        "name": "Spinka and Sons",
+        "amount": 384.38,
+        "date": "4/14/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 132,
+        "name": "Schultz-Carroll",
+        "amount": 691.25,
+        "date": "2/29/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 133,
+        "name": "Reichert-Jakubowski",
+        "amount": 589.17,
+        "date": "5/22/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 134,
+        "name": "Rath and Sons",
+        "amount": 503.63,
+        "date": "10/25/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 135,
+        "name": "Buckridge Inc",
+        "amount": 411.66,
+        "date": "3/20/2024",
+        "type": "Education"
+    },
+    {
+        "id": 136,
+        "name": "Greenholt and Sons",
+        "amount": 379.33,
+        "date": "5/31/2024",
+        "type": "Education"
+    },
+    {
+        "id": 137,
+        "name": "Rempel, Schroeder and Kuhlman",
+        "amount": 900.99,
+        "date": "3/16/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 138,
+        "name": "Herman LLC",
+        "amount": 557.02,
+        "date": "12/8/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 139,
+        "name": "Ledner LLC",
+        "amount": 951.96,
+        "date": "2/16/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 140,
+        "name": "Hirthe-Klocko",
+        "amount": 136.02,
+        "date": "8/15/2023",
+        "type": "Education"
+    },
+    {
+        "id": 141,
+        "name": "Fadel, Little and Watsica",
+        "amount": 320.52,
+        "date": "2/12/2024",
+        "type": "Education"
+    },
+    {
+        "id": 142,
+        "name": "Torphy LLC",
+        "amount": 69.03,
+        "date": "9/9/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 143,
+        "name": "Spencer LLC",
+        "amount": 850.71,
+        "date": "5/9/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 144,
+        "name": "Bogan-Leannon",
+        "amount": 645.28,
+        "date": "6/5/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 145,
+        "name": "Langosh-Ledner",
+        "amount": 221.48,
+        "date": "6/6/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 146,
+        "name": "Jaskolski Inc",
+        "amount": 911.2,
+        "date": "8/14/2023",
+        "type": "Education"
+    },
+    {
+        "id": 147,
+        "name": "MacGyver, Ruecker and Dietrich",
+        "amount": 3.79,
+        "date": "6/3/2024",
+        "type": "Education"
+    },
+    {
+        "id": 148,
+        "name": "Wintheiser Inc",
+        "amount": 671.62,
+        "date": "11/5/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 149,
+        "name": "McDermott-Wiegand",
+        "amount": 412.31,
+        "date": "10/17/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 150,
+        "name": "Mertz, Champlin and Herman",
+        "amount": 915.12,
+        "date": "12/22/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 151,
+        "name": "Bednar-Reichel",
+        "amount": 244.34,
+        "date": "7/25/2023",
+        "type": "Education"
+    },
+    {
+        "id": 152,
+        "name": "Luettgen-Leuschke",
+        "amount": 376.0,
+        "date": "10/10/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 153,
+        "name": "Block-Schmidt",
+        "amount": 498.49,
+        "date": "2/26/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 154,
+        "name": "Bergnaum-Kerluke",
+        "amount": 924.69,
+        "date": "1/28/2024",
+        "type": "Education"
+    },
+    {
+        "id": 155,
+        "name": "Osinski-Lang",
+        "amount": 583.36,
+        "date": "12/6/2023",
+        "type": "Education"
+    },
+    {
+        "id": 156,
+        "name": "Muller Inc",
+        "amount": 216.72,
+        "date": "3/26/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 157,
+        "name": "Rath, Heidenreich and Olson",
+        "amount": 802.25,
+        "date": "8/21/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 158,
+        "name": "Robel Inc",
+        "amount": 94.13,
+        "date": "8/20/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 159,
+        "name": "Ebert-Lebsack",
+        "amount": 59.75,
+        "date": "8/14/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 160,
+        "name": "Jerde LLC",
+        "amount": 122.88,
+        "date": "4/19/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 161,
+        "name": "Williamson-Keeling",
+        "amount": 356.01,
+        "date": "12/6/2023",
+        "type": "Education"
+    },
+    {
+        "id": 162,
+        "name": "Hills-Kiehn",
+        "amount": 326.72,
+        "date": "11/28/2023",
+        "type": "Education"
+    },
+    {
+        "id": 163,
+        "name": "Gleason, Wiegand and Thompson",
+        "amount": 513.71,
+        "date": "1/26/2024",
+        "type": "Education"
+    },
+    {
+        "id": 164,
+        "name": "Labadie-O'Conner",
+        "amount": 657.58,
+        "date": "1/26/2024",
+        "type": "Education"
+    },
+    {
+        "id": 165,
+        "name": "Dietrich LLC",
+        "amount": 508.17,
+        "date": "7/20/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 166,
+        "name": "Botsford LLC",
+        "amount": 983.01,
+        "date": "7/15/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 167,
+        "name": "Breitenberg-Nader",
+        "amount": 905.46,
+        "date": "11/29/2023",
+        "type": "Education"
+    },
+    {
+        "id": 168,
+        "name": "Koepp-Casper",
+        "amount": 746.6,
+        "date": "4/2/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 169,
+        "name": "Kuhn, Wehner and Emard",
+        "amount": 892.87,
+        "date": "3/3/2024",
+        "type": "Education"
+    },
+    {
+        "id": 170,
+        "name": "Wisozk-Hartmann",
+        "amount": 790.72,
+        "date": "10/9/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 171,
+        "name": "Bernhard, Stroman and Lindgren",
+        "amount": 49.2,
+        "date": "12/27/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 172,
+        "name": "Olson and Sons",
+        "amount": 609.39,
+        "date": "5/26/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 173,
+        "name": "Bashirian, Yundt and Kautzer",
+        "amount": 186.24,
+        "date": "11/26/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 174,
+        "name": "Blanda-Lakin",
+        "amount": 383.52,
+        "date": "5/25/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 175,
+        "name": "Boyer-Raynor",
+        "amount": 188.59,
+        "date": "8/6/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 176,
+        "name": "Barrows, Howell and Rowe",
+        "amount": 82.04,
+        "date": "4/5/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 177,
+        "name": "Kirlin, Terry and Cruickshank",
+        "amount": 136.39,
+        "date": "2/15/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 178,
+        "name": "Williamson-O'Reilly",
+        "amount": 658.21,
+        "date": "9/29/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 179,
+        "name": "Ryan LLC",
+        "amount": 814.7,
+        "date": "8/5/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 180,
+        "name": "Schumm, Jenkins and Abernathy",
+        "amount": 831.03,
+        "date": "7/21/2023",
+        "type": "Education"
+    },
+    {
+        "id": 181,
+        "name": "Gutkowski, Douglas and Ryan",
+        "amount": 617.48,
+        "date": "6/24/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 182,
+        "name": "Kuhn and Sons",
+        "amount": 266.31,
+        "date": "4/15/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 183,
+        "name": "Skiles, Wilkinson and Hegmann",
+        "amount": 261.94,
+        "date": "4/26/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 184,
+        "name": "Murphy Inc",
+        "amount": 234.73,
+        "date": "10/3/2023",
+        "type": "Education"
+    },
+    {
+        "id": 185,
+        "name": "Wehner-Hammes",
+        "amount": 945.74,
+        "date": "2/5/2024",
+        "type": "Education"
+    },
+    {
+        "id": 186,
+        "name": "Bergnaum, Lemke and Gutmann",
+        "amount": 593.46,
+        "date": "3/3/2024",
+        "type": "Education"
+    },
+    {
+        "id": 187,
+        "name": "Raynor-Terry",
+        "amount": 636.6,
+        "date": "7/17/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 188,
+        "name": "Welch LLC",
+        "amount": 638.54,
+        "date": "12/6/2023",
+        "type": "Education"
+    },
+    {
+        "id": 189,
+        "name": "Gusikowski, Reynolds and Kling",
+        "amount": 44.96,
+        "date": "2/27/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 190,
+        "name": "Lakin, Lind and Rosenbaum",
+        "amount": 852.14,
+        "date": "9/18/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 191,
+        "name": "Carroll LLC",
+        "amount": 389.27,
+        "date": "12/18/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 192,
+        "name": "Mueller, Corkery and Considine",
+        "amount": 543.57,
+        "date": "6/5/2024",
+        "type": "Education"
+    },
+    {
+        "id": 193,
+        "name": "Lindgren, Flatley and Schoen",
+        "amount": 83.01,
+        "date": "12/7/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 194,
+        "name": "Trantow LLC",
+        "amount": 743.57,
+        "date": "11/22/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 195,
+        "name": "MacGyver and Sons",
+        "amount": 245.51,
+        "date": "9/23/2023",
+        "type": "Education"
+    },
+    {
+        "id": 196,
+        "name": "Shanahan Group",
+        "amount": 715.02,
+        "date": "10/2/2023",
+        "type": "Education"
+    },
+    {
+        "id": 197,
+        "name": "Olson-Gerlach",
+        "amount": 661.57,
+        "date": "6/27/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 198,
+        "name": "Brekke-Koch",
+        "amount": 165.86,
+        "date": "11/16/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 199,
+        "name": "Halvorson Inc",
+        "amount": 896.24,
+        "date": "10/26/2023",
+        "type": "Education"
+    },
+    {
+        "id": 200,
+        "name": "Jakubowski Group",
+        "amount": 244.11,
+        "date": "4/24/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 201,
+        "name": "Zemlak, Haley and Jast",
+        "amount": 114.75,
+        "date": "3/15/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 202,
+        "name": "Monahan and Sons",
+        "amount": 797.1,
+        "date": "9/16/2023",
+        "type": "Education"
+    },
+    {
+        "id": 203,
+        "name": "Gibson, Borer and Boyle",
+        "amount": 863.2,
+        "date": "11/5/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 204,
+        "name": "Boyer-Pfeffer",
+        "amount": 308.31,
+        "date": "2/13/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 205,
+        "name": "Heathcote, Graham and Pfeffer",
+        "amount": 737.57,
+        "date": "7/21/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 206,
+        "name": "Bergstrom-D'Amore",
+        "amount": 296.3,
+        "date": "2/9/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 207,
+        "name": "Conn, Hammes and Walsh",
+        "amount": 629.47,
+        "date": "7/3/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 208,
+        "name": "Ernser-Doyle",
+        "amount": 227.84,
+        "date": "10/14/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 209,
+        "name": "Bins-Leffler",
+        "amount": 631.04,
+        "date": "9/4/2023",
+        "type": "Education"
+    },
+    {
+        "id": 210,
+        "name": "Gerhold-Grant",
+        "amount": 267.77,
+        "date": "10/13/2023",
+        "type": "Education"
+    },
+    {
+        "id": 211,
+        "name": "Weissnat Group",
+        "amount": 746.22,
+        "date": "2/12/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 212,
+        "name": "Schumm-Schumm",
+        "amount": 596.1,
+        "date": "4/9/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 213,
+        "name": "Heller, Hessel and Nitzsche",
+        "amount": 458.76,
+        "date": "2/1/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 214,
+        "name": "Rodriguez-Kutch",
+        "amount": 694.05,
+        "date": "2/11/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 215,
+        "name": "Flatley and Sons",
+        "amount": 516.73,
+        "date": "11/23/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 216,
+        "name": "Wisoky-Schmitt",
+        "amount": 707.14,
+        "date": "12/13/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 217,
+        "name": "Feil-Jacobs",
+        "amount": 80.09,
+        "date": "5/5/2024",
+        "type": "Education"
+    },
+    {
+        "id": 218,
+        "name": "Frami Group",
+        "amount": 899.65,
+        "date": "11/30/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 219,
+        "name": "Douglas, Reichert and Mraz",
+        "amount": 982.05,
+        "date": "10/24/2023",
+        "type": "Education"
+    },
+    {
+        "id": 220,
+        "name": "MacGyver LLC",
+        "amount": 144.13,
+        "date": "4/17/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 221,
+        "name": "Hane, Paucek and McKenzie",
+        "amount": 686.0,
+        "date": "7/1/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 222,
+        "name": "Medhurst-Steuber",
+        "amount": 38.81,
+        "date": "12/13/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 223,
+        "name": "Towne, McCullough and Pacocha",
+        "amount": 816.43,
+        "date": "8/10/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 224,
+        "name": "Leannon and Sons",
+        "amount": 454.74,
+        "date": "8/4/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 225,
+        "name": "McLaughlin, Wisozk and Gutmann",
+        "amount": 545.1,
+        "date": "8/17/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 226,
+        "name": "Turcotte-Kilback",
+        "amount": 513.42,
+        "date": "3/15/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 227,
+        "name": "Stoltenberg and Sons",
+        "amount": 295.04,
+        "date": "8/6/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 228,
+        "name": "Botsford-Hilll",
+        "amount": 587.29,
+        "date": "4/26/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 229,
+        "name": "Hahn-Klein",
+        "amount": 993.59,
+        "date": "4/10/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 230,
+        "name": "Legros-Miller",
+        "amount": 570.44,
+        "date": "7/30/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 231,
+        "name": "Kiehn Inc",
+        "amount": 498.75,
+        "date": "10/25/2023",
+        "type": "Education"
+    },
+    {
+        "id": 232,
+        "name": "McCullough Group",
+        "amount": 103.96,
+        "date": "12/15/2023",
+        "type": "Education"
+    },
+    {
+        "id": 233,
+        "name": "Torp Inc",
+        "amount": 929.98,
+        "date": "12/27/2023",
+        "type": "Education"
+    },
+    {
+        "id": 234,
+        "name": "Heaney and Sons",
+        "amount": 375.58,
+        "date": "4/27/2024",
+        "type": "Education"
+    },
+    {
+        "id": 235,
+        "name": "Gleason-Lindgren",
+        "amount": 786.1,
+        "date": "8/8/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 236,
+        "name": "Barrows, Upton and Heathcote",
+        "amount": 703.83,
+        "date": "10/20/2023",
+        "type": "Education"
+    },
+    {
+        "id": 237,
+        "name": "Senger, Dickinson and Raynor",
+        "amount": 325.65,
+        "date": "1/12/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 238,
+        "name": "Stehr-Hegmann",
+        "amount": 834.9,
+        "date": "2/26/2024",
+        "type": "Education"
+    },
+    {
+        "id": 239,
+        "name": "Pfannerstill, Cartwright and Shields",
+        "amount": 295.23,
+        "date": "6/29/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 240,
+        "name": "Schoen-Gusikowski",
+        "amount": 61.25,
+        "date": "6/11/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 241,
+        "name": "Greenholt, Bogisich and Hodkiewicz",
+        "amount": 545.91,
+        "date": "4/4/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 242,
+        "name": "Crona-Bartoletti",
+        "amount": 466.16,
+        "date": "10/10/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 243,
+        "name": "McCullough, Schaefer and Koch",
+        "amount": 180.91,
+        "date": "12/10/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 244,
+        "name": "Turcotte, Welch and Renner",
+        "amount": 409.79,
+        "date": "11/25/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 245,
+        "name": "O'Connell-Runolfsdottir",
+        "amount": 224.11,
+        "date": "2/15/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 246,
+        "name": "Frami-Koelpin",
+        "amount": 918.12,
+        "date": "11/1/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 247,
+        "name": "Stracke, Orn and Doyle",
+        "amount": 662.82,
+        "date": "10/13/2023",
+        "type": "Education"
+    },
+    {
+        "id": 248,
+        "name": "Hilll, Boyer and Heidenreich",
+        "amount": 834.33,
+        "date": "1/10/2024",
+        "type": "Education"
+    },
+    {
+        "id": 249,
+        "name": "Braun-Abernathy",
+        "amount": 63.99,
+        "date": "3/29/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 250,
+        "name": "Kertzmann-Wintheiser",
+        "amount": 300.61,
+        "date": "7/31/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 251,
+        "name": "Senger-O'Kon",
+        "amount": 563.75,
+        "date": "3/24/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 252,
+        "name": "Rowe, Walker and Monahan",
+        "amount": 445.2,
+        "date": "2/25/2024",
+        "type": "Education"
+    },
+    {
+        "id": 253,
+        "name": "Kulas, Batz and Hodkiewicz",
+        "amount": 364.46,
+        "date": "6/11/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 254,
+        "name": "Zemlak Group",
+        "amount": 615.07,
+        "date": "7/31/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 255,
+        "name": "Kuhn, Tremblay and Tillman",
+        "amount": 380.33,
+        "date": "7/27/2023",
+        "type": "Education"
+    },
+    {
+        "id": 256,
+        "name": "Botsford Inc",
+        "amount": 489.52,
+        "date": "8/16/2023",
+        "type": "Education"
+    },
+    {
+        "id": 257,
+        "name": "Boehm Group",
+        "amount": 981.71,
+        "date": "8/24/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 258,
+        "name": "Torphy, Rodriguez and Corkery",
+        "amount": 673.03,
+        "date": "2/27/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 259,
+        "name": "McDermott-Jacobson",
+        "amount": 484.47,
+        "date": "11/9/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 260,
+        "name": "Stamm, Runolfsdottir and Wunsch",
+        "amount": 20.03,
+        "date": "6/16/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 261,
+        "name": "Gibson, Morar and Johnston",
+        "amount": 990.18,
+        "date": "8/27/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 262,
+        "name": "Dare-Mertz",
+        "amount": 459.2,
+        "date": "9/2/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 263,
+        "name": "Welch-Denesik",
+        "amount": 876.39,
+        "date": "1/3/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 264,
+        "name": "Kihn Inc",
+        "amount": 251.95,
+        "date": "5/2/2024",
+        "type": "Education"
+    },
+    {
+        "id": 265,
+        "name": "Tremblay, Emmerich and Hackett",
+        "amount": 347.03,
+        "date": "12/5/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 266,
+        "name": "Ullrich-Abshire",
+        "amount": 435.74,
+        "date": "11/12/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 267,
+        "name": "Graham-Veum",
+        "amount": 629.5,
+        "date": "3/29/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 268,
+        "name": "O'Reilly LLC",
+        "amount": 219.82,
+        "date": "2/29/2024",
+        "type": "Education"
+    },
+    {
+        "id": 269,
+        "name": "Stanton, Osinski and Schmitt",
+        "amount": 755.94,
+        "date": "4/11/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 270,
+        "name": "Abbott-West",
+        "amount": 325.7,
+        "date": "11/9/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 271,
+        "name": "Volkman-Becker",
+        "amount": 21.05,
+        "date": "3/18/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 272,
+        "name": "Lakin-Upton",
+        "amount": 556.93,
+        "date": "11/10/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 273,
+        "name": "Hartmann-Funk",
+        "amount": 759.61,
+        "date": "11/10/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 274,
+        "name": "Braun, Nolan and Wisozk",
+        "amount": 430.34,
+        "date": "10/21/2023",
+        "type": "Education"
+    },
+    {
+        "id": 275,
+        "name": "Mitchell and Sons",
+        "amount": 998.24,
+        "date": "1/26/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 276,
+        "name": "Reynolds-Friesen",
+        "amount": 409.34,
+        "date": "2/8/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 277,
+        "name": "Beatty-Bosco",
+        "amount": 753.23,
+        "date": "7/30/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 278,
+        "name": "Bartoletti, Ruecker and Anderson",
+        "amount": 355.22,
+        "date": "8/20/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 279,
+        "name": "Zemlak, Kunde and Green",
+        "amount": 881.31,
+        "date": "4/15/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 280,
+        "name": "Abernathy, Gusikowski and Crooks",
+        "amount": 996.77,
+        "date": "8/29/2023",
+        "type": "Education"
+    },
+    {
+        "id": 281,
+        "name": "Hamill-Becker",
+        "amount": 789.76,
+        "date": "3/15/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 282,
+        "name": "Feest Inc",
+        "amount": 332.26,
+        "date": "2/5/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 283,
+        "name": "Kshlerin, Ledner and Casper",
+        "amount": 679.66,
+        "date": "6/9/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 284,
+        "name": "Dach Group",
+        "amount": 209.81,
+        "date": "3/29/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 285,
+        "name": "Quigley-Bergnaum",
+        "amount": 354.83,
+        "date": "10/11/2023",
+        "type": "Education"
+    },
+    {
+        "id": 286,
+        "name": "Wilderman-O'Conner",
+        "amount": 736.23,
+        "date": "5/23/2024",
+        "type": "Education"
+    },
+    {
+        "id": 287,
+        "name": "Bins and Sons",
+        "amount": 136.7,
+        "date": "1/13/2024",
+        "type": "Education"
+    },
+    {
+        "id": 288,
+        "name": "Gutmann Group",
+        "amount": 408.23,
+        "date": "9/30/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 289,
+        "name": "VonRueden LLC",
+        "amount": 793.35,
+        "date": "5/20/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 290,
+        "name": "Gerhold-Koepp",
+        "amount": 826.4,
+        "date": "2/13/2024",
+        "type": "Education"
+    },
+    {
+        "id": 291,
+        "name": "Bahringer, Balistreri and Torphy",
+        "amount": 39.27,
+        "date": "10/7/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 292,
+        "name": "Treutel-Kilback",
+        "amount": 801.87,
+        "date": "2/18/2024",
+        "type": "Education"
+    },
+    {
+        "id": 293,
+        "name": "Runte Inc",
+        "amount": 333.13,
+        "date": "4/5/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 294,
+        "name": "Kunde, Dare and Upton",
+        "amount": 461.05,
+        "date": "3/3/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 295,
+        "name": "Schaefer, Rohan and Funk",
+        "amount": 743.46,
+        "date": "6/2/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 296,
+        "name": "Treutel, Kshlerin and Goodwin",
+        "amount": 847.56,
+        "date": "7/14/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 297,
+        "name": "Larkin, Schmeler and Gorczany",
+        "amount": 558.54,
+        "date": "6/12/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 298,
+        "name": "Bradtke-Becker",
+        "amount": 74.14,
+        "date": "10/26/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 299,
+        "name": "Rutherford, Collier and Nolan",
+        "amount": 840.0,
+        "date": "8/31/2023",
+        "type": "Education"
+    },
+    {
+        "id": 300,
+        "name": "Russel, Bernhard and Hickle",
+        "amount": 953.87,
+        "date": "12/29/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 301,
+        "name": "Barrows, Brekke and Emmerich",
+        "amount": 202.31,
+        "date": "6/11/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 302,
+        "name": "Tillman Inc",
+        "amount": 641.13,
+        "date": "12/27/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 303,
+        "name": "Stokes, O'Kon and Jerde",
+        "amount": 696.32,
+        "date": "10/30/2023",
+        "type": "Education"
+    },
+    {
+        "id": 304,
+        "name": "Collins and Sons",
+        "amount": 32.65,
+        "date": "10/15/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 305,
+        "name": "Schiller, Grant and Bernier",
+        "amount": 548.6,
+        "date": "4/13/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 306,
+        "name": "Koepp-Wisoky",
+        "amount": 136.04,
+        "date": "4/27/2024",
+        "type": "Education"
+    },
+    {
+        "id": 307,
+        "name": "Boyer-Carroll",
+        "amount": 281.44,
+        "date": "5/17/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 308,
+        "name": "Dooley-Bosco",
+        "amount": 169.81,
+        "date": "3/2/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 309,
+        "name": "Davis and Sons",
+        "amount": 689.4,
+        "date": "11/26/2023",
+        "type": "Education"
+    },
+    {
+        "id": 310,
+        "name": "Rodriguez, Johns and Koelpin",
+        "amount": 274.52,
+        "date": "2/29/2024",
+        "type": "Education"
+    },
+    {
+        "id": 311,
+        "name": "Smith, Lemke and Flatley",
+        "amount": 58.02,
+        "date": "6/23/2024",
+        "type": "Education"
+    },
+    {
+        "id": 312,
+        "name": "Denesik-Kuvalis",
+        "amount": 615.39,
+        "date": "12/3/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 313,
+        "name": "Hegmann, Jakubowski and Pollich",
+        "amount": 874.04,
+        "date": "2/23/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 314,
+        "name": "Zemlak-Brekke",
+        "amount": 391.34,
+        "date": "5/1/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 315,
+        "name": "Beahan, Douglas and Williamson",
+        "amount": 376.27,
+        "date": "8/21/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 316,
+        "name": "Lesch, Hoeger and Rice",
+        "amount": 256.09,
+        "date": "1/28/2024",
+        "type": "Education"
+    },
+    {
+        "id": 317,
+        "name": "Fay, O'Kon and Harvey",
+        "amount": 223.85,
+        "date": "2/18/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 318,
+        "name": "Lind-Witting",
+        "amount": 341.23,
+        "date": "10/5/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 319,
+        "name": "Williamson, Wisozk and Willms",
+        "amount": 785.01,
+        "date": "11/27/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 320,
+        "name": "Watsica-Mitchell",
+        "amount": 637.67,
+        "date": "5/22/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 321,
+        "name": "Herman-Hodkiewicz",
+        "amount": 834.69,
+        "date": "7/16/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 322,
+        "name": "Bayer, Reichel and Stanton",
+        "amount": 479.52,
+        "date": "4/15/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 323,
+        "name": "Schaefer, Jenkins and Nikolaus",
+        "amount": 352.65,
+        "date": "6/25/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 324,
+        "name": "Hills LLC",
+        "amount": 331.29,
+        "date": "10/22/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 325,
+        "name": "Abernathy, Grimes and Friesen",
+        "amount": 261.49,
+        "date": "9/30/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 326,
+        "name": "Ziemann and Sons",
+        "amount": 655.05,
+        "date": "4/26/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 327,
+        "name": "Torphy-Oberbrunner",
+        "amount": 400.49,
+        "date": "10/14/2023",
+        "type": "Education"
+    },
+    {
+        "id": 328,
+        "name": "Wolf-Howell",
+        "amount": 653.09,
+        "date": "9/1/2023",
+        "type": "Education"
+    },
+    {
+        "id": 329,
+        "name": "Heller, Kiehn and Satterfield",
+        "amount": 22.22,
+        "date": "7/20/2023",
+        "type": "Education"
+    },
+    {
+        "id": 330,
+        "name": "Donnelly, Schneider and Shields",
+        "amount": 29.66,
+        "date": "3/23/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 331,
+        "name": "Stroman-Rowe",
+        "amount": 896.16,
+        "date": "7/28/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 332,
+        "name": "Borer-Brekke",
+        "amount": 722.31,
+        "date": "6/12/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 333,
+        "name": "Mills-Miller",
+        "amount": 150.0,
+        "date": "12/16/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 334,
+        "name": "Leuschke, Marks and Ziemann",
+        "amount": 525.73,
+        "date": "4/20/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 335,
+        "name": "Cormier, Green and Sauer",
+        "amount": 474.24,
+        "date": "7/23/2023",
+        "type": "Education"
+    },
+    {
+        "id": 336,
+        "name": "Deckow-Hills",
+        "amount": 668.24,
+        "date": "11/20/2023",
+        "type": "Education"
+    },
+    {
+        "id": 337,
+        "name": "Toy-Hudson",
+        "amount": 950.41,
+        "date": "1/22/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 338,
+        "name": "Becker Inc",
+        "amount": 611.47,
+        "date": "1/19/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 339,
+        "name": "Christiansen Group",
+        "amount": 703.49,
+        "date": "12/25/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 340,
+        "name": "Hessel, Graham and Powlowski",
+        "amount": 243.17,
+        "date": "8/25/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 341,
+        "name": "Fritsch Group",
+        "amount": 230.5,
+        "date": "3/23/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 342,
+        "name": "Nicolas, Torphy and Funk",
+        "amount": 412.48,
+        "date": "2/6/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 343,
+        "name": "Kemmer, Reilly and Bechtelar",
+        "amount": 665.41,
+        "date": "9/15/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 344,
+        "name": "Hyatt and Sons",
+        "amount": 243.83,
+        "date": "4/6/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 345,
+        "name": "Turcotte, Breitenberg and Jast",
+        "amount": 837.6,
+        "date": "8/13/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 346,
+        "name": "Nikolaus, Robel and Aufderhar",
+        "amount": 932.58,
+        "date": "4/29/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 347,
+        "name": "Krajcik-Funk",
+        "amount": 89.22,
+        "date": "11/6/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 348,
+        "name": "Mertz Group",
+        "amount": 951.84,
+        "date": "4/12/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 349,
+        "name": "Kreiger LLC",
+        "amount": 407.98,
+        "date": "9/20/2023",
+        "type": "Education"
+    },
+    {
+        "id": 350,
+        "name": "Bogisich-Schiller",
+        "amount": 143.62,
+        "date": "12/4/2023",
+        "type": "Education"
+    },
+    {
+        "id": 351,
+        "name": "Zemlak-Okuneva",
+        "amount": 365.91,
+        "date": "1/29/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 352,
+        "name": "Green, Ullrich and O'Connell",
+        "amount": 715.39,
+        "date": "2/23/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 353,
+        "name": "Fisher Group",
+        "amount": 563.37,
+        "date": "10/25/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 354,
+        "name": "Emard-Labadie",
+        "amount": 565.16,
+        "date": "3/7/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 355,
+        "name": "Ankunding and Sons",
+        "amount": 799.6,
+        "date": "10/18/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 356,
+        "name": "Stracke, Cruickshank and Swaniawski",
+        "amount": 552.19,
+        "date": "8/16/2023",
+        "type": "Education"
+    },
+    {
+        "id": 357,
+        "name": "Pfannerstill, Brown and Becker",
+        "amount": 848.55,
+        "date": "7/6/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 358,
+        "name": "Moore-Herzog",
+        "amount": 237.91,
+        "date": "3/11/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 359,
+        "name": "Bradtke, Will and Tillman",
+        "amount": 739.34,
+        "date": "5/9/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 360,
+        "name": "Lubowitz Inc",
+        "amount": 578.23,
+        "date": "8/1/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 361,
+        "name": "Haag Group",
+        "amount": 900.19,
+        "date": "12/4/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 362,
+        "name": "Witting-Simonis",
+        "amount": 735.35,
+        "date": "9/9/2023",
+        "type": "Education"
+    },
+    {
+        "id": 363,
+        "name": "Mann and Sons",
+        "amount": 877.37,
+        "date": "7/11/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 364,
+        "name": "Nikolaus, Morar and Fay",
+        "amount": 623.84,
+        "date": "11/18/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 365,
+        "name": "Koepp, Nicolas and Nienow",
+        "amount": 290.25,
+        "date": "5/22/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 366,
+        "name": "Mitchell Group",
+        "amount": 264.09,
+        "date": "3/26/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 367,
+        "name": "Wilkinson-Ritchie",
+        "amount": 612.55,
+        "date": "5/27/2024",
+        "type": "Education"
+    },
+    {
+        "id": 368,
+        "name": "Hammes, Runte and Kovacek",
+        "amount": 722.21,
+        "date": "12/7/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 369,
+        "name": "Ritchie, Gutkowski and Effertz",
+        "amount": 678.74,
+        "date": "3/21/2024",
+        "type": "Education"
+    },
+    {
+        "id": 370,
+        "name": "Zemlak, Parker and Ryan",
+        "amount": 783.89,
+        "date": "9/24/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 371,
+        "name": "Littel LLC",
+        "amount": 270.16,
+        "date": "11/29/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 372,
+        "name": "Hyatt, Reilly and Armstrong",
+        "amount": 743.72,
+        "date": "9/19/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 373,
+        "name": "Gislason, Sporer and Heathcote",
+        "amount": 64.83,
+        "date": "2/3/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 374,
+        "name": "Morar Group",
+        "amount": 913.84,
+        "date": "5/9/2024",
+        "type": "Education"
+    },
+    {
+        "id": 375,
+        "name": "Medhurst-Corwin",
+        "amount": 772.26,
+        "date": "6/27/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 376,
+        "name": "Jones-Ernser",
+        "amount": 153.7,
+        "date": "11/23/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 377,
+        "name": "Schamberger LLC",
+        "amount": 748.98,
+        "date": "4/21/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 378,
+        "name": "Waelchi, Daniel and Lesch",
+        "amount": 697.53,
+        "date": "8/23/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 379,
+        "name": "Lemke-Mitchell",
+        "amount": 815.6,
+        "date": "6/28/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 380,
+        "name": "Gulgowski, Skiles and Beier",
+        "amount": 440.97,
+        "date": "4/30/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 381,
+        "name": "Brekke and Sons",
+        "amount": 886.18,
+        "date": "7/14/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 382,
+        "name": "Bosco Group",
+        "amount": 789.58,
+        "date": "5/3/2024",
+        "type": "Education"
+    },
+    {
+        "id": 383,
+        "name": "Wuckert, Rohan and Douglas",
+        "amount": 97.88,
+        "date": "8/14/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 384,
+        "name": "Bauch-Hamill",
+        "amount": 986.43,
+        "date": "10/2/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 385,
+        "name": "Wolff LLC",
+        "amount": 345.27,
+        "date": "10/2/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 386,
+        "name": "O'Keefe Inc",
+        "amount": 800.63,
+        "date": "4/7/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 387,
+        "name": "Swift, Haag and Rempel",
+        "amount": 397.39,
+        "date": "6/8/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 388,
+        "name": "Balistreri, Jast and Runte",
+        "amount": 972.11,
+        "date": "1/16/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 389,
+        "name": "Kunde-Ziemann",
+        "amount": 211.47,
+        "date": "3/27/2024",
+        "type": "Education"
+    },
+    {
+        "id": 390,
+        "name": "Lebsack Inc",
+        "amount": 920.93,
+        "date": "4/20/2024",
+        "type": "Education"
+    },
+    {
+        "id": 391,
+        "name": "Cruickshank Group",
+        "amount": 555.69,
+        "date": "8/15/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 392,
+        "name": "Gleichner LLC",
+        "amount": 637.65,
+        "date": "6/27/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 393,
+        "name": "Wolff, Turner and Goodwin",
+        "amount": 155.04,
+        "date": "8/2/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 394,
+        "name": "Kuphal and Sons",
+        "amount": 874.59,
+        "date": "5/8/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 395,
+        "name": "Crist-Lynch",
+        "amount": 303.69,
+        "date": "11/26/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 396,
+        "name": "Leuschke LLC",
+        "amount": 295.13,
+        "date": "4/18/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 397,
+        "name": "Breitenberg and Sons",
+        "amount": 143.0,
+        "date": "5/18/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 398,
+        "name": "Bergstrom-Mraz",
+        "amount": 876.2,
+        "date": "9/3/2023",
+        "type": "Education"
+    },
+    {
+        "id": 399,
+        "name": "Lehner-Davis",
+        "amount": 68.64,
+        "date": "5/9/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 400,
+        "name": "Williamson, Erdman and McKenzie",
+        "amount": 278.61,
+        "date": "4/8/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 401,
+        "name": "Nienow, Kuphal and Schowalter",
+        "amount": 840.68,
+        "date": "4/2/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 402,
+        "name": "Gibson, Bayer and Torp",
+        "amount": 662.92,
+        "date": "4/9/2024",
+        "type": "Education"
+    },
+    {
+        "id": 403,
+        "name": "Fisher LLC",
+        "amount": 4.66,
+        "date": "7/19/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 404,
+        "name": "Hamill Group",
+        "amount": 663.46,
+        "date": "3/21/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 405,
+        "name": "Schiller, Ondricka and Mante",
+        "amount": 153.82,
+        "date": "12/24/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 406,
+        "name": "Mayert-Larkin",
+        "amount": 230.08,
+        "date": "2/2/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 407,
+        "name": "Cartwright-Connelly",
+        "amount": 50.21,
+        "date": "4/13/2024",
+        "type": "Education"
+    },
+    {
+        "id": 408,
+        "name": "Treutel Inc",
+        "amount": 46.36,
+        "date": "11/17/2023",
+        "type": "Education"
+    },
+    {
+        "id": 409,
+        "name": "Rutherford, Schumm and Lockman",
+        "amount": 390.92,
+        "date": "11/8/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 410,
+        "name": "Veum-Douglas",
+        "amount": 538.6,
+        "date": "6/18/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 411,
+        "name": "Greenfelder, Crist and Rolfson",
+        "amount": 481.4,
+        "date": "10/17/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 412,
+        "name": "Daugherty-Ziemann",
+        "amount": 76.95,
+        "date": "1/17/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 413,
+        "name": "Jacobi and Sons",
+        "amount": 465.88,
+        "date": "8/20/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 414,
+        "name": "Rath-Kunze",
+        "amount": 48.88,
+        "date": "4/16/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 415,
+        "name": "Sipes, Adams and Treutel",
+        "amount": 25.19,
+        "date": "1/4/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 416,
+        "name": "Bruen Group",
+        "amount": 963.94,
+        "date": "11/7/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 417,
+        "name": "King, Nienow and Hayes",
+        "amount": 727.86,
+        "date": "7/11/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 418,
+        "name": "Baumbach LLC",
+        "amount": 893.63,
+        "date": "9/30/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 419,
+        "name": "Cronin, Crooks and Kutch",
+        "amount": 605.84,
+        "date": "10/15/2023",
+        "type": "Education"
+    },
+    {
+        "id": 420,
+        "name": "Strosin, Predovic and Cummerata",
+        "amount": 554.57,
+        "date": "9/22/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 421,
+        "name": "Schmidt-Auer",
+        "amount": 446.97,
+        "date": "4/9/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 422,
+        "name": "Larson, Beahan and Gorczany",
+        "amount": 94.66,
+        "date": "8/7/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 423,
+        "name": "Stark Group",
+        "amount": 511.66,
+        "date": "12/8/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 424,
+        "name": "Grant Inc",
+        "amount": 845.44,
+        "date": "6/6/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 425,
+        "name": "Schuster-Jenkins",
+        "amount": 911.46,
+        "date": "9/7/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 426,
+        "name": "Mayert-Harvey",
+        "amount": 819.77,
+        "date": "3/5/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 427,
+        "name": "Spinka, Schroeder and Schimmel",
+        "amount": 423.16,
+        "date": "1/14/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 428,
+        "name": "Padberg LLC",
+        "amount": 59.88,
+        "date": "6/21/2024",
+        "type": "Education"
+    },
+    {
+        "id": 429,
+        "name": "Mann Inc",
+        "amount": 410.42,
+        "date": "9/13/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 430,
+        "name": "Greenholt-Barton",
+        "amount": 860.47,
+        "date": "9/9/2023",
+        "type": "Education"
+    },
+    {
+        "id": 431,
+        "name": "Kuphal, Kihn and Dooley",
+        "amount": 545.65,
+        "date": "3/21/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 432,
+        "name": "Bernier-Mayert",
+        "amount": 319.05,
+        "date": "12/22/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 433,
+        "name": "Auer-Lubowitz",
+        "amount": 469.46,
+        "date": "7/10/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 434,
+        "name": "Miller-Treutel",
+        "amount": 7.72,
+        "date": "6/29/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 435,
+        "name": "Bailey Group",
+        "amount": 563.86,
+        "date": "1/2/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 436,
+        "name": "Ullrich, Prosacco and Ratke",
+        "amount": 115.1,
+        "date": "2/17/2024",
+        "type": "Education"
+    },
+    {
+        "id": 437,
+        "name": "Cronin, Bechtelar and Bailey",
+        "amount": 483.07,
+        "date": "2/27/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 438,
+        "name": "Hegmann Group",
+        "amount": 283.05,
+        "date": "5/29/2024",
+        "type": "Education"
+    },
+    {
+        "id": 439,
+        "name": "Stanton LLC",
+        "amount": 214.34,
+        "date": "11/13/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 440,
+        "name": "Schimmel LLC",
+        "amount": 345.29,
+        "date": "7/2/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 441,
+        "name": "Thiel-Schowalter",
+        "amount": 469.56,
+        "date": "10/17/2023",
+        "type": "Education"
+    },
+    {
+        "id": 442,
+        "name": "Batz Inc",
+        "amount": 467.9,
+        "date": "7/8/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 443,
+        "name": "Metz Inc",
+        "amount": 284.45,
+        "date": "1/13/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 444,
+        "name": "Schiller Inc",
+        "amount": 481.06,
+        "date": "12/18/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 445,
+        "name": "Price Group",
+        "amount": 884.53,
+        "date": "8/3/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 446,
+        "name": "Mohr Group",
+        "amount": 894.32,
+        "date": "6/29/2023",
+        "type": "Education"
+    },
+    {
+        "id": 447,
+        "name": "Harvey, Padberg and Little",
+        "amount": 270.51,
+        "date": "6/1/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 448,
+        "name": "Vandervort-Kuphal",
+        "amount": 855.66,
+        "date": "7/6/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 449,
+        "name": "Nicolas LLC",
+        "amount": 432.78,
+        "date": "10/4/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 450,
+        "name": "Hayes, Mayer and Huel",
+        "amount": 63.34,
+        "date": "8/29/2023",
+        "type": "Education"
+    },
+    {
+        "id": 451,
+        "name": "Nitzsche-Romaguera",
+        "amount": 640.74,
+        "date": "2/22/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 452,
+        "name": "D'Amore, Welch and Runte",
+        "amount": 88.39,
+        "date": "6/18/2024",
+        "type": "Education"
+    },
+    {
+        "id": 453,
+        "name": "Bailey, Heller and Crona",
+        "amount": 505.15,
+        "date": "12/27/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 454,
+        "name": "Sawayn Inc",
+        "amount": 957.89,
+        "date": "7/26/2023",
+        "type": "Education"
+    },
+    {
+        "id": 455,
+        "name": "Pfannerstill, Renner and Ritchie",
+        "amount": 100.72,
+        "date": "2/18/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 456,
+        "name": "Schmeler-Connelly",
+        "amount": 825.61,
+        "date": "8/15/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 457,
+        "name": "Klein, Howe and Smith",
+        "amount": 11.79,
+        "date": "8/23/2023",
+        "type": "Education"
+    },
+    {
+        "id": 458,
+        "name": "Sauer, Collins and Dicki",
+        "amount": 242.02,
+        "date": "7/5/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 459,
+        "name": "Bernier LLC",
+        "amount": 951.4,
+        "date": "3/11/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 460,
+        "name": "Haley-Terry",
+        "amount": 966.13,
+        "date": "4/30/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 461,
+        "name": "Fay, D'Amore and Ernser",
+        "amount": 761.39,
+        "date": "8/3/2023",
+        "type": "Education"
+    },
+    {
+        "id": 462,
+        "name": "Littel-Konopelski",
+        "amount": 283.03,
+        "date": "10/29/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 463,
+        "name": "Kuhic-Hartmann",
+        "amount": 916.03,
+        "date": "2/15/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 464,
+        "name": "Mann and Sons",
+        "amount": 810.66,
+        "date": "10/9/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 465,
+        "name": "Hills-Turner",
+        "amount": 975.77,
+        "date": "8/7/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 466,
+        "name": "Roberts-Brekke",
+        "amount": 252.12,
+        "date": "12/20/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 467,
+        "name": "Fadel Group",
+        "amount": 865.45,
+        "date": "8/19/2023",
+        "type": "Education"
+    },
+    {
+        "id": 468,
+        "name": "Watsica, Kuhic and Brekke",
+        "amount": 78.32,
+        "date": "5/12/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 469,
+        "name": "Reilly-Legros",
+        "amount": 691.13,
+        "date": "4/12/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 470,
+        "name": "Lowe, Anderson and Borer",
+        "amount": 708.94,
+        "date": "6/6/2024",
+        "type": "Education"
+    },
+    {
+        "id": 471,
+        "name": "Green-Beer",
+        "amount": 791.02,
+        "date": "8/15/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 472,
+        "name": "Mohr, Walker and Dach",
+        "amount": 796.39,
+        "date": "1/22/2024",
+        "type": "Education"
+    },
+    {
+        "id": 473,
+        "name": "Spencer-Pagac",
+        "amount": 73.83,
+        "date": "6/20/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 474,
+        "name": "Lehner, Kunde and Becker",
+        "amount": 35.44,
+        "date": "4/22/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 475,
+        "name": "Kirlin-Schaden",
+        "amount": 370.34,
+        "date": "1/24/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 476,
+        "name": "Mann, Davis and Kohler",
+        "amount": 732.11,
+        "date": "4/22/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 477,
+        "name": "Mitchell, Botsford and Olson",
+        "amount": 77.35,
+        "date": "6/5/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 478,
+        "name": "McDermott Group",
+        "amount": 655.99,
+        "date": "5/29/2024",
+        "type": "Education"
+    },
+    {
+        "id": 479,
+        "name": "Baumbach-Mosciski",
+        "amount": 548.55,
+        "date": "6/18/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 480,
+        "name": "Upton Group",
+        "amount": 235.9,
+        "date": "12/12/2023",
+        "type": "Education"
+    },
+    {
+        "id": 481,
+        "name": "Fay-Bailey",
+        "amount": 868.44,
+        "date": "3/10/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 482,
+        "name": "Feil LLC",
+        "amount": 207.67,
+        "date": "3/21/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 483,
+        "name": "Beer Group",
+        "amount": 420.68,
+        "date": "7/1/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 484,
+        "name": "Simonis, VonRueden and Stroman",
+        "amount": 912.56,
+        "date": "10/28/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 485,
+        "name": "Russel, Wintheiser and Kub",
+        "amount": 9.44,
+        "date": "12/21/2023",
+        "type": "Education"
+    },
+    {
+        "id": 486,
+        "name": "Fay-Bernier",
+        "amount": 560.3,
+        "date": "1/31/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 487,
+        "name": "Sporer and Sons",
+        "amount": 111.88,
+        "date": "12/11/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 488,
+        "name": "Orn LLC",
+        "amount": 517.92,
+        "date": "2/5/2024",
+        "type": "Education"
+    },
+    {
+        "id": 489,
+        "name": "Abbott, Skiles and Gutmann",
+        "amount": 383.17,
+        "date": "1/23/2024",
+        "type": "Education"
+    },
+    {
+        "id": 490,
+        "name": "Brekke-Herzog",
+        "amount": 532.29,
+        "date": "2/7/2024",
+        "type": "Education"
+    },
+    {
+        "id": 491,
+        "name": "Wuckert Inc",
+        "amount": 957.38,
+        "date": "7/5/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 492,
+        "name": "Koelpin-Kub",
+        "amount": 481.94,
+        "date": "12/7/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 493,
+        "name": "Reichert Inc",
+        "amount": 736.95,
+        "date": "4/1/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 494,
+        "name": "Huel, Funk and Stoltenberg",
+        "amount": 734.64,
+        "date": "7/10/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 495,
+        "name": "Schaefer, Hermiston and Stokes",
+        "amount": 863.65,
+        "date": "5/16/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 496,
+        "name": "Keebler and Sons",
+        "amount": 320.01,
+        "date": "7/21/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 497,
+        "name": "Goodwin, Lehner and Legros",
+        "amount": 729.31,
+        "date": "11/22/2023",
+        "type": "Education"
+    },
+    {
+        "id": 498,
+        "name": "Russel, Veum and Hand",
+        "amount": 848.96,
+        "date": "10/17/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 499,
+        "name": "O'Conner, Satterfield and Zulauf",
+        "amount": 556.52,
+        "date": "2/23/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 500,
+        "name": "O'Connell, Frami and McGlynn",
+        "amount": 933.15,
+        "date": "6/4/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 501,
+        "name": "Bashirian and Sons",
+        "amount": 237.58,
+        "date": "7/13/2023",
+        "type": "Education"
+    },
+    {
+        "id": 502,
+        "name": "Dare-Hagenes",
+        "amount": 523.78,
+        "date": "3/12/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 503,
+        "name": "Lesch, Howe and Kessler",
+        "amount": 579.34,
+        "date": "5/10/2024",
+        "type": "Education"
+    },
+    {
+        "id": 504,
+        "name": "Schinner-Dibbert",
+        "amount": 26.32,
+        "date": "8/19/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 505,
+        "name": "Schinner Inc",
+        "amount": 56.13,
+        "date": "7/4/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 506,
+        "name": "Hansen, Dicki and Roob",
+        "amount": 298.09,
+        "date": "4/19/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 507,
+        "name": "Hamill-Mills",
+        "amount": 688.23,
+        "date": "1/31/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 508,
+        "name": "O'Reilly, Romaguera and Feest",
+        "amount": 462.97,
+        "date": "2/13/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 509,
+        "name": "Kassulke and Sons",
+        "amount": 230.54,
+        "date": "9/23/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 510,
+        "name": "Barton Group",
+        "amount": 813.31,
+        "date": "11/16/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 511,
+        "name": "Bergnaum, Rolfson and Farrell",
+        "amount": 117.61,
+        "date": "12/15/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 512,
+        "name": "DuBuque Group",
+        "amount": 379.49,
+        "date": "10/29/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 513,
+        "name": "Lueilwitz-Abshire",
+        "amount": 769.13,
+        "date": "9/29/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 514,
+        "name": "Walsh, Dickens and Lang",
+        "amount": 4.73,
+        "date": "4/5/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 515,
+        "name": "Marquardt-Brakus",
+        "amount": 557.56,
+        "date": "10/15/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 516,
+        "name": "Parker, Torphy and Rosenbaum",
+        "amount": 814.89,
+        "date": "5/27/2024",
+        "type": "Education"
+    },
+    {
+        "id": 517,
+        "name": "Gerhold-Monahan",
+        "amount": 612.63,
+        "date": "1/2/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 518,
+        "name": "Walter, Bogisich and Becker",
+        "amount": 798.31,
+        "date": "3/23/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 519,
+        "name": "Gulgowski-Goyette",
+        "amount": 440.74,
+        "date": "7/12/2023",
+        "type": "Education"
+    },
+    {
+        "id": 520,
+        "name": "Schaden Group",
+        "amount": 351.86,
+        "date": "7/19/2023",
+        "type": "Education"
+    },
+    {
+        "id": 521,
+        "name": "Kuhlman, Morissette and Mayert",
+        "amount": 969.39,
+        "date": "12/4/2023",
+        "type": "Education"
+    },
+    {
+        "id": 522,
+        "name": "Dickens and Sons",
+        "amount": 997.37,
+        "date": "10/11/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 523,
+        "name": "Balistreri, Maggio and Kreiger",
+        "amount": 24.52,
+        "date": "7/20/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 524,
+        "name": "Hayes and Sons",
+        "amount": 976.37,
+        "date": "2/28/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 525,
+        "name": "Dach, Lynch and Bechtelar",
+        "amount": 215.2,
+        "date": "7/9/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 526,
+        "name": "Hintz, Prosacco and Shields",
+        "amount": 690.22,
+        "date": "9/24/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 527,
+        "name": "Moen Inc",
+        "amount": 35.49,
+        "date": "1/25/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 528,
+        "name": "Orn, Koss and Howell",
+        "amount": 771.25,
+        "date": "5/17/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 529,
+        "name": "Orn, Dietrich and Ortiz",
+        "amount": 544.12,
+        "date": "1/5/2024",
+        "type": "Education"
+    },
+    {
+        "id": 530,
+        "name": "Dach, Daniel and Mertz",
+        "amount": 741.57,
+        "date": "2/25/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 531,
+        "name": "Thiel, Von and Stroman",
+        "amount": 387.11,
+        "date": "6/25/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 532,
+        "name": "Rogahn-Kemmer",
+        "amount": 478.14,
+        "date": "4/7/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 533,
+        "name": "Hartmann and Sons",
+        "amount": 26.7,
+        "date": "2/18/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 534,
+        "name": "VonRueden and Sons",
+        "amount": 103.83,
+        "date": "4/1/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 535,
+        "name": "Torp, O'Conner and Jast",
+        "amount": 452.76,
+        "date": "10/15/2023",
+        "type": "Education"
+    },
+    {
+        "id": 536,
+        "name": "Klocko-Crona",
+        "amount": 103.49,
+        "date": "5/12/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 537,
+        "name": "Reinger Inc",
+        "amount": 985.68,
+        "date": "2/8/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 538,
+        "name": "Wolf LLC",
+        "amount": 591.24,
+        "date": "5/12/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 539,
+        "name": "Hahn, Leffler and Lesch",
+        "amount": 865.78,
+        "date": "12/23/2023",
+        "type": "Education"
+    },
+    {
+        "id": 540,
+        "name": "Dickens, Parker and Keeling",
+        "amount": 179.55,
+        "date": "4/18/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 541,
+        "name": "Batz and Sons",
+        "amount": 543.15,
+        "date": "4/26/2024",
+        "type": "Education"
+    },
+    {
+        "id": 542,
+        "name": "Jaskolski-Hegmann",
+        "amount": 721.19,
+        "date": "2/1/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 543,
+        "name": "Spinka-Cassin",
+        "amount": 448.42,
+        "date": "12/17/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 544,
+        "name": "Carter and Sons",
+        "amount": 631.28,
+        "date": "1/13/2024",
+        "type": "Education"
+    },
+    {
+        "id": 545,
+        "name": "Okuneva-Rogahn",
+        "amount": 177.08,
+        "date": "4/29/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 546,
+        "name": "Klocko-Miller",
+        "amount": 734.36,
+        "date": "3/7/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 547,
+        "name": "Hane, Gislason and Ryan",
+        "amount": 395.87,
+        "date": "7/22/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 548,
+        "name": "Prohaska Inc",
+        "amount": 622.52,
+        "date": "11/28/2023",
+        "type": "Education"
+    },
+    {
+        "id": 549,
+        "name": "Auer, Zieme and Kautzer",
+        "amount": 439.71,
+        "date": "5/19/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 550,
+        "name": "Johnston Inc",
+        "amount": 277.09,
+        "date": "2/9/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 551,
+        "name": "Reilly-Jenkins",
+        "amount": 175.91,
+        "date": "1/20/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 552,
+        "name": "Bailey-Sanford",
+        "amount": 280.25,
+        "date": "1/23/2024",
+        "type": "Education"
+    },
+    {
+        "id": 553,
+        "name": "Pfannerstill Group",
+        "amount": 428.07,
+        "date": "10/15/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 554,
+        "name": "Mosciski, Wuckert and Heller",
+        "amount": 68.06,
+        "date": "3/25/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 555,
+        "name": "Mills Group",
+        "amount": 414.8,
+        "date": "1/10/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 556,
+        "name": "Rogahn Group",
+        "amount": 873.82,
+        "date": "12/21/2023",
+        "type": "Education"
+    },
+    {
+        "id": 557,
+        "name": "Fritsch and Sons",
+        "amount": 673.27,
+        "date": "7/20/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 558,
+        "name": "Hintz-Bauch",
+        "amount": 735.61,
+        "date": "8/13/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 559,
+        "name": "Ritchie-Beier",
+        "amount": 161.75,
+        "date": "7/23/2023",
+        "type": "Education"
+    },
+    {
+        "id": 560,
+        "name": "Sanford, Prohaska and Boehm",
+        "amount": 684.32,
+        "date": "7/12/2023",
+        "type": "Education"
+    },
+    {
+        "id": 561,
+        "name": "Rippin, Powlowski and Terry",
+        "amount": 471.44,
+        "date": "8/13/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 562,
+        "name": "Swaniawski Inc",
+        "amount": 587.18,
+        "date": "10/3/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 563,
+        "name": "Bernier-Kub",
+        "amount": 396.57,
+        "date": "4/14/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 564,
+        "name": "Sanford, Zboncak and Pouros",
+        "amount": 393.46,
+        "date": "2/10/2024",
+        "type": "Education"
+    },
+    {
+        "id": 565,
+        "name": "Thompson and Sons",
+        "amount": 597.09,
+        "date": "1/11/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 566,
+        "name": "Osinski-Koepp",
+        "amount": 440.8,
+        "date": "6/23/2024",
+        "type": "Education"
+    },
+    {
+        "id": 567,
+        "name": "Cormier and Sons",
+        "amount": 781.59,
+        "date": "8/29/2023",
+        "type": "Education"
+    },
+    {
+        "id": 568,
+        "name": "Orn-Bernhard",
+        "amount": 229.85,
+        "date": "4/22/2024",
+        "type": "Education"
+    },
+    {
+        "id": 569,
+        "name": "O'Conner and Sons",
+        "amount": 498.59,
+        "date": "11/18/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 570,
+        "name": "Rutherford-McKenzie",
+        "amount": 307.22,
+        "date": "4/10/2024",
+        "type": "Education"
+    },
+    {
+        "id": 571,
+        "name": "Will Group",
+        "amount": 267.55,
+        "date": "1/23/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 572,
+        "name": "Douglas-Schaefer",
+        "amount": 424.42,
+        "date": "11/22/2023",
+        "type": "Education"
+    },
+    {
+        "id": 573,
+        "name": "White, Bechtelar and Volkman",
+        "amount": 835.65,
+        "date": "3/30/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 574,
+        "name": "Price and Sons",
+        "amount": 428.86,
+        "date": "3/19/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 575,
+        "name": "Streich Group",
+        "amount": 175.22,
+        "date": "1/14/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 576,
+        "name": "Sauer Group",
+        "amount": 538.66,
+        "date": "2/29/2024",
+        "type": "Education"
+    },
+    {
+        "id": 577,
+        "name": "Harvey-Prosacco",
+        "amount": 383.8,
+        "date": "2/25/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 578,
+        "name": "Emard and Sons",
+        "amount": 873.38,
+        "date": "5/23/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 579,
+        "name": "Hegmann-Stokes",
+        "amount": 882.4,
+        "date": "6/11/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 580,
+        "name": "Kovacek-Wisozk",
+        "amount": 139.12,
+        "date": "4/20/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 581,
+        "name": "Schulist LLC",
+        "amount": 770.03,
+        "date": "12/24/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 582,
+        "name": "Willms Inc",
+        "amount": 923.46,
+        "date": "3/26/2024",
+        "type": "Education"
+    },
+    {
+        "id": 583,
+        "name": "Mosciski-Halvorson",
+        "amount": 825.32,
+        "date": "4/4/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 584,
+        "name": "Graham-Green",
+        "amount": 234.54,
+        "date": "6/26/2023",
+        "type": "Education"
+    },
+    {
+        "id": 585,
+        "name": "Beatty, Nikolaus and Hansen",
+        "amount": 868.7,
+        "date": "1/28/2024",
+        "type": "Education"
+    },
+    {
+        "id": 586,
+        "name": "Lebsack, Tremblay and Upton",
+        "amount": 121.76,
+        "date": "1/26/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 587,
+        "name": "Sporer-Jast",
+        "amount": 738.33,
+        "date": "4/10/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 588,
+        "name": "Dietrich, Heaney and Frami",
+        "amount": 117.8,
+        "date": "6/10/2024",
+        "type": "Education"
+    },
+    {
+        "id": 589,
+        "name": "Green LLC",
+        "amount": 586.22,
+        "date": "12/1/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 590,
+        "name": "Bechtelar, Williamson and Gorczany",
+        "amount": 988.67,
+        "date": "2/20/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 591,
+        "name": "MacGyver Inc",
+        "amount": 765.34,
+        "date": "5/29/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 592,
+        "name": "Gislason, Schimmel and Friesen",
+        "amount": 656.2,
+        "date": "7/18/2023",
+        "type": "Education"
+    },
+    {
+        "id": 593,
+        "name": "Bosco LLC",
+        "amount": 898.66,
+        "date": "8/22/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 594,
+        "name": "McKenzie Group",
+        "amount": 148.95,
+        "date": "1/1/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 595,
+        "name": "Bailey-Hamill",
+        "amount": 51.31,
+        "date": "12/24/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 596,
+        "name": "Wolf-Deckow",
+        "amount": 25.67,
+        "date": "10/23/2023",
+        "type": "Education"
+    },
+    {
+        "id": 597,
+        "name": "Gislason-Rath",
+        "amount": 125.07,
+        "date": "9/7/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 598,
+        "name": "Marquardt, Bauch and Bode",
+        "amount": 44.07,
+        "date": "5/6/2024",
+        "type": "Education"
+    },
+    {
+        "id": 599,
+        "name": "Senger-Bogisich",
+        "amount": 593.84,
+        "date": "11/5/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 600,
+        "name": "Macejkovic-Schuppe",
+        "amount": 466.24,
+        "date": "4/2/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 601,
+        "name": "Farrell, Conroy and Koepp",
+        "amount": 966.72,
+        "date": "2/22/2024",
+        "type": "Education"
+    },
+    {
+        "id": 602,
+        "name": "Funk-Willms",
+        "amount": 10.75,
+        "date": "6/9/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 603,
+        "name": "Connelly, Corkery and Cartwright",
+        "amount": 145.49,
+        "date": "12/19/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 604,
+        "name": "Spencer LLC",
+        "amount": 19.69,
+        "date": "11/19/2023",
+        "type": "Education"
+    },
+    {
+        "id": 605,
+        "name": "Okuneva-Grimes",
+        "amount": 819.05,
+        "date": "5/22/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 606,
+        "name": "Stracke LLC",
+        "amount": 32.49,
+        "date": "1/17/2024",
+        "type": "Education"
+    },
+    {
+        "id": 607,
+        "name": "Kerluke-Wolff",
+        "amount": 982.48,
+        "date": "2/19/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 608,
+        "name": "Von-Stark",
+        "amount": 735.73,
+        "date": "7/20/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 609,
+        "name": "Cole, Klocko and Kertzmann",
+        "amount": 850.99,
+        "date": "4/12/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 610,
+        "name": "Deckow-Brekke",
+        "amount": 986.11,
+        "date": "5/13/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 611,
+        "name": "Kub Group",
+        "amount": 309.94,
+        "date": "8/31/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 612,
+        "name": "Morar, Brekke and Bradtke",
+        "amount": 327.78,
+        "date": "9/16/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 613,
+        "name": "Conn and Sons",
+        "amount": 5.91,
+        "date": "6/23/2024",
+        "type": "Education"
+    },
+    {
+        "id": 614,
+        "name": "Hodkiewicz Inc",
+        "amount": 534.19,
+        "date": "5/14/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 615,
+        "name": "Franecki, Moen and Feil",
+        "amount": 496.95,
+        "date": "7/26/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 616,
+        "name": "Sawayn and Sons",
+        "amount": 920.97,
+        "date": "6/28/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 617,
+        "name": "Kihn Inc",
+        "amount": 823.93,
+        "date": "6/29/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 618,
+        "name": "Marvin and Sons",
+        "amount": 489.74,
+        "date": "2/17/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 619,
+        "name": "Schmitt, Maggio and Dibbert",
+        "amount": 515.4,
+        "date": "6/15/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 620,
+        "name": "Rohan, Cremin and Cassin",
+        "amount": 608.69,
+        "date": "1/20/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 621,
+        "name": "Crist and Sons",
+        "amount": 746.04,
+        "date": "5/18/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 622,
+        "name": "Durgan-Hegmann",
+        "amount": 626.24,
+        "date": "8/3/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 623,
+        "name": "Abernathy, Upton and Gorczany",
+        "amount": 504.02,
+        "date": "10/7/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 624,
+        "name": "Kiehn Group",
+        "amount": 990.68,
+        "date": "4/25/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 625,
+        "name": "Kautzer Group",
+        "amount": 941.52,
+        "date": "1/22/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 626,
+        "name": "Kozey-Gibson",
+        "amount": 720.1,
+        "date": "4/23/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 627,
+        "name": "Quitzon, Marks and Fisher",
+        "amount": 231.81,
+        "date": "12/3/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 628,
+        "name": "Buckridge-Morissette",
+        "amount": 211.71,
+        "date": "4/25/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 629,
+        "name": "Weimann Group",
+        "amount": 455.81,
+        "date": "10/29/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 630,
+        "name": "Hamill and Sons",
+        "amount": 307.35,
+        "date": "2/25/2024",
+        "type": "Education"
+    },
+    {
+        "id": 631,
+        "name": "Marquardt-Lowe",
+        "amount": 975.26,
+        "date": "11/8/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 632,
+        "name": "Kuhn Inc",
+        "amount": 302.08,
+        "date": "9/15/2023",
+        "type": "Education"
+    },
+    {
+        "id": 633,
+        "name": "Ziemann-Grimes",
+        "amount": 213.85,
+        "date": "12/1/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 634,
+        "name": "Purdy, Graham and Altenwerth",
+        "amount": 577.31,
+        "date": "7/6/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 635,
+        "name": "Bergnaum, Cassin and Douglas",
+        "amount": 244.24,
+        "date": "7/14/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 636,
+        "name": "Schowalter Group",
+        "amount": 585.76,
+        "date": "6/8/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 637,
+        "name": "Kiehn, Wolf and Trantow",
+        "amount": 494.38,
+        "date": "1/11/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 638,
+        "name": "Balistreri and Sons",
+        "amount": 710.91,
+        "date": "2/6/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 639,
+        "name": "Emmerich-Stroman",
+        "amount": 31.03,
+        "date": "10/4/2023",
+        "type": "Education"
+    },
+    {
+        "id": 640,
+        "name": "Kihn Inc",
+        "amount": 733.19,
+        "date": "9/11/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 641,
+        "name": "Upton Inc",
+        "amount": 702.36,
+        "date": "11/17/2023",
+        "type": "Education"
+    },
+    {
+        "id": 642,
+        "name": "Cole, Wiza and Bartoletti",
+        "amount": 654.23,
+        "date": "6/5/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 643,
+        "name": "Powlowski Inc",
+        "amount": 430.75,
+        "date": "10/23/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 644,
+        "name": "Heathcote-Gulgowski",
+        "amount": 358.0,
+        "date": "5/6/2024",
+        "type": "Education"
+    },
+    {
+        "id": 645,
+        "name": "Johns, Yost and Rutherford",
+        "amount": 479.27,
+        "date": "8/16/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 646,
+        "name": "Schroeder-Fadel",
+        "amount": 557.48,
+        "date": "11/25/2023",
+        "type": "Education"
+    },
+    {
+        "id": 647,
+        "name": "Schaden, Fahey and Barrows",
+        "amount": 195.39,
+        "date": "12/17/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 648,
+        "name": "Mayer-Schmidt",
+        "amount": 537.68,
+        "date": "5/31/2024",
+        "type": "Education"
+    },
+    {
+        "id": 649,
+        "name": "Stracke-Wiegand",
+        "amount": 306.72,
+        "date": "7/20/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 650,
+        "name": "Green LLC",
+        "amount": 404.9,
+        "date": "6/30/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 651,
+        "name": "Lebsack, Howe and Smitham",
+        "amount": 532.37,
+        "date": "8/28/2023",
+        "type": "Education"
+    },
+    {
+        "id": 652,
+        "name": "Rempel Group",
+        "amount": 936.5,
+        "date": "3/20/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 653,
+        "name": "Pfannerstill, Hane and O'Hara",
+        "amount": 572.92,
+        "date": "7/5/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 654,
+        "name": "Hand-Johnson",
+        "amount": 996.58,
+        "date": "6/21/2024",
+        "type": "Education"
+    },
+    {
+        "id": 655,
+        "name": "Gulgowski-Torp",
+        "amount": 443.25,
+        "date": "1/8/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 656,
+        "name": "Gulgowski and Sons",
+        "amount": 899.7,
+        "date": "10/17/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 657,
+        "name": "Pacocha LLC",
+        "amount": 878.65,
+        "date": "3/3/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 658,
+        "name": "Rodriguez, Bernhard and Glover",
+        "amount": 99.19,
+        "date": "9/6/2023",
+        "type": "Education"
+    },
+    {
+        "id": 659,
+        "name": "Armstrong Group",
+        "amount": 637.41,
+        "date": "12/22/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 660,
+        "name": "Renner Group",
+        "amount": 933.49,
+        "date": "8/29/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 661,
+        "name": "Padberg LLC",
+        "amount": 727.97,
+        "date": "4/13/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 662,
+        "name": "Robel Group",
+        "amount": 203.66,
+        "date": "11/28/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 663,
+        "name": "Flatley, Turner and Harris",
+        "amount": 683.62,
+        "date": "1/20/2024",
+        "type": "Education"
+    },
+    {
+        "id": 664,
+        "name": "Romaguera Inc",
+        "amount": 199.74,
+        "date": "10/24/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 665,
+        "name": "Gibson-Yundt",
+        "amount": 977.53,
+        "date": "7/3/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 666,
+        "name": "Johnston Group",
+        "amount": 531.78,
+        "date": "10/7/2023",
+        "type": "Education"
+    },
+    {
+        "id": 667,
+        "name": "Brown Group",
+        "amount": 879.49,
+        "date": "7/1/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 668,
+        "name": "Cruickshank-O'Conner",
+        "amount": 947.16,
+        "date": "6/22/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 669,
+        "name": "Goldner and Sons",
+        "amount": 404.1,
+        "date": "1/19/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 670,
+        "name": "Lakin-Marvin",
+        "amount": 640.25,
+        "date": "8/11/2023",
+        "type": "Education"
+    },
+    {
+        "id": 671,
+        "name": "Stiedemann Group",
+        "amount": 542.58,
+        "date": "1/11/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 672,
+        "name": "Mraz Group",
+        "amount": 451.47,
+        "date": "6/26/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 673,
+        "name": "Grady-Schulist",
+        "amount": 489.31,
+        "date": "3/7/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 674,
+        "name": "Nitzsche, Schmitt and Rippin",
+        "amount": 350.7,
+        "date": "12/13/2023",
+        "type": "Education"
+    },
+    {
+        "id": 675,
+        "name": "Gerlach-Klocko",
+        "amount": 115.34,
+        "date": "7/20/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 676,
+        "name": "Gleichner-Krajcik",
+        "amount": 87.23,
+        "date": "12/31/2023",
+        "type": "Education"
+    },
+    {
+        "id": 677,
+        "name": "Schaden, Dietrich and MacGyver",
+        "amount": 13.01,
+        "date": "6/4/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 678,
+        "name": "Mann Group",
+        "amount": 284.87,
+        "date": "12/30/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 679,
+        "name": "Turner, Hartmann and Cassin",
+        "amount": 643.67,
+        "date": "5/31/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 680,
+        "name": "Streich Inc",
+        "amount": 373.96,
+        "date": "3/17/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 681,
+        "name": "Morar and Sons",
+        "amount": 993.97,
+        "date": "2/17/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 682,
+        "name": "Hamill-Donnelly",
+        "amount": 571.3,
+        "date": "3/1/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 683,
+        "name": "Osinski-Krajcik",
+        "amount": 707.04,
+        "date": "2/10/2024",
+        "type": "Education"
+    },
+    {
+        "id": 684,
+        "name": "Kub, Crona and Cartwright",
+        "amount": 260.04,
+        "date": "10/17/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 685,
+        "name": "Schimmel Group",
+        "amount": 389.78,
+        "date": "6/22/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 686,
+        "name": "Boyer, Durgan and Tremblay",
+        "amount": 398.65,
+        "date": "3/23/2024",
+        "type": "Education"
+    },
+    {
+        "id": 687,
+        "name": "Beer, Wintheiser and Nitzsche",
+        "amount": 255.53,
+        "date": "2/26/2024",
+        "type": "Education"
+    },
+    {
+        "id": 688,
+        "name": "Quigley Inc",
+        "amount": 799.05,
+        "date": "7/21/2023",
+        "type": "Education"
+    },
+    {
+        "id": 689,
+        "name": "Medhurst-Crooks",
+        "amount": 179.03,
+        "date": "12/4/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 690,
+        "name": "Luettgen Group",
+        "amount": 637.18,
+        "date": "9/12/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 691,
+        "name": "Crist and Sons",
+        "amount": 264.46,
+        "date": "3/12/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 692,
+        "name": "Wehner Group",
+        "amount": 838.15,
+        "date": "9/10/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 693,
+        "name": "Farrell and Sons",
+        "amount": 764.36,
+        "date": "9/12/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 694,
+        "name": "Zieme-Kautzer",
+        "amount": 43.92,
+        "date": "6/22/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 695,
+        "name": "Kreiger, Roberts and Ortiz",
+        "amount": 517.8,
+        "date": "6/21/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 696,
+        "name": "Fritsch Inc",
+        "amount": 621.74,
+        "date": "1/23/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 697,
+        "name": "Hettinger Group",
+        "amount": 923.37,
+        "date": "12/15/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 698,
+        "name": "Bergstrom and Sons",
+        "amount": 891.75,
+        "date": "7/11/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 699,
+        "name": "Emard and Sons",
+        "amount": 347.79,
+        "date": "10/1/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 700,
+        "name": "Bode, Runolfsdottir and Ondricka",
+        "amount": 126.45,
+        "date": "11/18/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 701,
+        "name": "Lesch and Sons",
+        "amount": 585.85,
+        "date": "11/9/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 702,
+        "name": "Turcotte, Barton and Legros",
+        "amount": 229.4,
+        "date": "2/22/2024",
+        "type": "Education"
+    },
+    {
+        "id": 703,
+        "name": "Reichert-Macejkovic",
+        "amount": 76.45,
+        "date": "4/25/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 704,
+        "name": "Murray-Adams",
+        "amount": 457.13,
+        "date": "9/21/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 705,
+        "name": "Gerhold, Hayes and Dach",
+        "amount": 928.07,
+        "date": "3/8/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 706,
+        "name": "Gleichner, Becker and Price",
+        "amount": 142.23,
+        "date": "10/23/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 707,
+        "name": "Collins, Corkery and Gleason",
+        "amount": 804.15,
+        "date": "9/9/2023",
+        "type": "Education"
+    },
+    {
+        "id": 708,
+        "name": "Feest Group",
+        "amount": 830.49,
+        "date": "2/19/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 709,
+        "name": "Gorczany-Witting",
+        "amount": 544.75,
+        "date": "8/10/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 710,
+        "name": "Trantow Inc",
+        "amount": 926.7,
+        "date": "11/12/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 711,
+        "name": "O'Reilly-Tillman",
+        "amount": 11.22,
+        "date": "1/5/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 712,
+        "name": "Herman, Kihn and Purdy",
+        "amount": 512.2,
+        "date": "9/2/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 713,
+        "name": "Zboncak-Kunde",
+        "amount": 815.09,
+        "date": "2/12/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 714,
+        "name": "Adams Group",
+        "amount": 406.7,
+        "date": "11/29/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 715,
+        "name": "Robel-Barrows",
+        "amount": 962.81,
+        "date": "10/19/2023",
+        "type": "Education"
+    },
+    {
+        "id": 716,
+        "name": "Collier, Olson and Spencer",
+        "amount": 701.74,
+        "date": "6/18/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 717,
+        "name": "Huels, Reichel and Macejkovic",
+        "amount": 18.0,
+        "date": "12/25/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 718,
+        "name": "Stoltenberg-Douglas",
+        "amount": 627.3,
+        "date": "6/12/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 719,
+        "name": "Ferry LLC",
+        "amount": 362.71,
+        "date": "3/26/2024",
+        "type": "Education"
+    },
+    {
+        "id": 720,
+        "name": "Connelly, Daniel and Quitzon",
+        "amount": 666.1,
+        "date": "7/17/2023",
+        "type": "Education"
+    },
+    {
+        "id": 721,
+        "name": "Schmeler, Walter and Johns",
+        "amount": 934.36,
+        "date": "6/2/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 722,
+        "name": "Jacobi-Huel",
+        "amount": 669.29,
+        "date": "4/4/2024",
+        "type": "Education"
+    },
+    {
+        "id": 723,
+        "name": "Hammes and Sons",
+        "amount": 169.76,
+        "date": "11/3/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 724,
+        "name": "Stark-Schaden",
+        "amount": 68.76,
+        "date": "8/31/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 725,
+        "name": "Pfeffer-Grady",
+        "amount": 132.25,
+        "date": "4/21/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 726,
+        "name": "Labadie, Rogahn and Harvey",
+        "amount": 531.74,
+        "date": "4/17/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 727,
+        "name": "Sanford, Leuschke and Bode",
+        "amount": 69.6,
+        "date": "1/10/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 728,
+        "name": "Lowe LLC",
+        "amount": 860.29,
+        "date": "3/29/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 729,
+        "name": "Hyatt-Raynor",
+        "amount": 966.3,
+        "date": "10/10/2023",
+        "type": "Education"
+    },
+    {
+        "id": 730,
+        "name": "Rolfson LLC",
+        "amount": 785.94,
+        "date": "2/20/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 731,
+        "name": "Carroll and Sons",
+        "amount": 226.11,
+        "date": "11/13/2023",
+        "type": "Education"
+    },
+    {
+        "id": 732,
+        "name": "Rippin-O'Conner",
+        "amount": 260.62,
+        "date": "9/16/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 733,
+        "name": "Ledner-Smitham",
+        "amount": 466.19,
+        "date": "11/18/2023",
+        "type": "Education"
+    },
+    {
+        "id": 734,
+        "name": "VonRueden LLC",
+        "amount": 143.83,
+        "date": "9/28/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 735,
+        "name": "Beahan-Kuhn",
+        "amount": 836.0,
+        "date": "7/8/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 736,
+        "name": "Glover-Smitham",
+        "amount": 441.97,
+        "date": "9/13/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 737,
+        "name": "Conroy, Bergnaum and Bosco",
+        "amount": 337.73,
+        "date": "8/14/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 738,
+        "name": "Stiedemann-Lebsack",
+        "amount": 984.18,
+        "date": "4/9/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 739,
+        "name": "Corwin-Hoppe",
+        "amount": 63.35,
+        "date": "1/4/2024",
+        "type": "Education"
+    },
+    {
+        "id": 740,
+        "name": "Bernhard-McKenzie",
+        "amount": 550.75,
+        "date": "1/24/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 741,
+        "name": "Brekke Group",
+        "amount": 554.99,
+        "date": "1/1/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 742,
+        "name": "Feest Inc",
+        "amount": 453.4,
+        "date": "2/23/2024",
+        "type": "Education"
+    },
+    {
+        "id": 743,
+        "name": "Satterfield, Bogan and Lockman",
+        "amount": 894.02,
+        "date": "8/10/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 744,
+        "name": "Kessler, Johnston and Fisher",
+        "amount": 722.99,
+        "date": "2/13/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 745,
+        "name": "Funk Inc",
+        "amount": 116.53,
+        "date": "9/15/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 746,
+        "name": "Beer, Dibbert and Graham",
+        "amount": 461.52,
+        "date": "6/18/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 747,
+        "name": "Hyatt Inc",
+        "amount": 807.76,
+        "date": "10/28/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 748,
+        "name": "Gerhold LLC",
+        "amount": 31.85,
+        "date": "5/2/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 749,
+        "name": "Jakubowski, Hahn and Bartell",
+        "amount": 928.98,
+        "date": "7/30/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 750,
+        "name": "Jones-Hilpert",
+        "amount": 350.26,
+        "date": "7/17/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 751,
+        "name": "Bosco-Rogahn",
+        "amount": 232.44,
+        "date": "6/5/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 752,
+        "name": "Bernier and Sons",
+        "amount": 522.96,
+        "date": "1/4/2024",
+        "type": "Education"
+    },
+    {
+        "id": 753,
+        "name": "VonRueden and Sons",
+        "amount": 250.47,
+        "date": "6/11/2024",
+        "type": "Education"
+    },
+    {
+        "id": 754,
+        "name": "Ruecker Group",
+        "amount": 290.62,
+        "date": "5/22/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 755,
+        "name": "Cole, Muller and Schulist",
+        "amount": 503.95,
+        "date": "9/15/2023",
+        "type": "Education"
+    },
+    {
+        "id": 756,
+        "name": "Collins-Feeney",
+        "amount": 771.53,
+        "date": "7/6/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 757,
+        "name": "Harber and Sons",
+        "amount": 315.24,
+        "date": "6/27/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 758,
+        "name": "Koss, Braun and Morar",
+        "amount": 314.04,
+        "date": "5/7/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 759,
+        "name": "Kuhn-Kshlerin",
+        "amount": 708.81,
+        "date": "8/20/2023",
+        "type": "Education"
+    },
+    {
+        "id": 760,
+        "name": "Dicki-Toy",
+        "amount": 784.01,
+        "date": "5/4/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 761,
+        "name": "Roberts, O'Reilly and Sanford",
+        "amount": 841.49,
+        "date": "1/25/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 762,
+        "name": "Roberts Group",
+        "amount": 307.19,
+        "date": "7/4/2023",
+        "type": "Education"
+    },
+    {
+        "id": 763,
+        "name": "O'Conner LLC",
+        "amount": 60.27,
+        "date": "11/23/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 764,
+        "name": "Roob and Sons",
+        "amount": 36.94,
+        "date": "1/18/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 765,
+        "name": "Fisher, Weber and Douglas",
+        "amount": 240.33,
+        "date": "8/8/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 766,
+        "name": "Johnson, Quigley and Nikolaus",
+        "amount": 183.17,
+        "date": "3/16/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 767,
+        "name": "Borer-Fisher",
+        "amount": 699.63,
+        "date": "8/23/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 768,
+        "name": "Lebsack Inc",
+        "amount": 530.16,
+        "date": "9/10/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 769,
+        "name": "Bergstrom, Friesen and Mohr",
+        "amount": 744.76,
+        "date": "5/19/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 770,
+        "name": "Hills and Sons",
+        "amount": 142.82,
+        "date": "11/1/2023",
+        "type": "Education"
+    },
+    {
+        "id": 771,
+        "name": "Ferry-Gislason",
+        "amount": 689.26,
+        "date": "8/11/2023",
+        "type": "Education"
+    },
+    {
+        "id": 772,
+        "name": "Renner, Romaguera and Sawayn",
+        "amount": 301.1,
+        "date": "1/3/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 773,
+        "name": "Emard-Wilkinson",
+        "amount": 306.5,
+        "date": "11/10/2023",
+        "type": "Education"
+    },
+    {
+        "id": 774,
+        "name": "Batz Group",
+        "amount": 315.96,
+        "date": "11/13/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 775,
+        "name": "Doyle-Leannon",
+        "amount": 47.68,
+        "date": "5/18/2024",
+        "type": "Education"
+    },
+    {
+        "id": 776,
+        "name": "Klocko LLC",
+        "amount": 323.83,
+        "date": "10/29/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 777,
+        "name": "Keebler Inc",
+        "amount": 497.83,
+        "date": "2/7/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 778,
+        "name": "Gusikowski LLC",
+        "amount": 939.24,
+        "date": "11/28/2023",
+        "type": "Education"
+    },
+    {
+        "id": 779,
+        "name": "Flatley-Cassin",
+        "amount": 321.59,
+        "date": "1/11/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 780,
+        "name": "Kassulke and Sons",
+        "amount": 108.13,
+        "date": "2/24/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 781,
+        "name": "Welch-Ferry",
+        "amount": 428.78,
+        "date": "5/24/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 782,
+        "name": "Bergnaum, Corkery and Kemmer",
+        "amount": 224.77,
+        "date": "11/9/2023",
+        "type": "Education"
+    },
+    {
+        "id": 783,
+        "name": "Marvin, Weissnat and Kling",
+        "amount": 607.52,
+        "date": "4/17/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 784,
+        "name": "Parker-Keebler",
+        "amount": 982.07,
+        "date": "3/31/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 785,
+        "name": "Lang, Muller and Lowe",
+        "amount": 900.47,
+        "date": "4/17/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 786,
+        "name": "Pouros and Sons",
+        "amount": 200.19,
+        "date": "11/12/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 787,
+        "name": "Hickle and Sons",
+        "amount": 104.07,
+        "date": "6/28/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 788,
+        "name": "Stoltenberg, Nicolas and Powlowski",
+        "amount": 412.73,
+        "date": "8/31/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 789,
+        "name": "Jakubowski Group",
+        "amount": 958.29,
+        "date": "4/5/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 790,
+        "name": "McCullough and Sons",
+        "amount": 165.36,
+        "date": "11/23/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 791,
+        "name": "Wyman Inc",
+        "amount": 716.54,
+        "date": "12/4/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 792,
+        "name": "Daugherty-Swift",
+        "amount": 676.3,
+        "date": "10/3/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 793,
+        "name": "Denesik-Ruecker",
+        "amount": 275.26,
+        "date": "7/2/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 794,
+        "name": "Heathcote, Jacobs and Heidenreich",
+        "amount": 620.47,
+        "date": "10/18/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 795,
+        "name": "Koss, Auer and Oberbrunner",
+        "amount": 913.53,
+        "date": "6/13/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 796,
+        "name": "Bergstrom, Romaguera and Gerlach",
+        "amount": 39.94,
+        "date": "6/24/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 797,
+        "name": "Hickle-Lakin",
+        "amount": 194.77,
+        "date": "6/15/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 798,
+        "name": "Connelly, Upton and Schamberger",
+        "amount": 192.93,
+        "date": "5/18/2024",
+        "type": "Education"
+    },
+    {
+        "id": 799,
+        "name": "Wilderman and Sons",
+        "amount": 999.37,
+        "date": "2/16/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 800,
+        "name": "Hoppe, Feil and Heaney",
+        "amount": 359.52,
+        "date": "2/27/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 801,
+        "name": "Bartoletti, Denesik and Pacocha",
+        "amount": 690.65,
+        "date": "8/25/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 802,
+        "name": "Cummings, Kirlin and Leuschke",
+        "amount": 758.29,
+        "date": "6/25/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 803,
+        "name": "O'Connell, Konopelski and Raynor",
+        "amount": 436.5,
+        "date": "6/27/2023",
+        "type": "Education"
+    },
+    {
+        "id": 804,
+        "name": "Treutel, Prohaska and Tillman",
+        "amount": 850.95,
+        "date": "8/6/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 805,
+        "name": "Little-Morar",
+        "amount": 251.77,
+        "date": "12/31/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 806,
+        "name": "Cassin LLC",
+        "amount": 606.11,
+        "date": "1/28/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 807,
+        "name": "Lockman LLC",
+        "amount": 93.56,
+        "date": "8/21/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 808,
+        "name": "Tremblay, Lehner and Kub",
+        "amount": 26.4,
+        "date": "3/10/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 809,
+        "name": "Dach-Lesch",
+        "amount": 727.45,
+        "date": "8/30/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 810,
+        "name": "Hermiston, Hills and West",
+        "amount": 669.41,
+        "date": "7/6/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 811,
+        "name": "Herzog, Dickinson and Zieme",
+        "amount": 78.06,
+        "date": "3/18/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 812,
+        "name": "Langosh, Hills and Wyman",
+        "amount": 670.8,
+        "date": "1/22/2024",
+        "type": "Education"
+    },
+    {
+        "id": 813,
+        "name": "Cartwright, Krajcik and Murazik",
+        "amount": 994.4,
+        "date": "11/23/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 814,
+        "name": "Gorczany-Pollich",
+        "amount": 390.52,
+        "date": "1/25/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 815,
+        "name": "Bartell, Goldner and Hamill",
+        "amount": 369.95,
+        "date": "10/24/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 816,
+        "name": "Satterfield-Abshire",
+        "amount": 264.71,
+        "date": "4/12/2024",
+        "type": "Education"
+    },
+    {
+        "id": 817,
+        "name": "Kuhn, Turcotte and Ondricka",
+        "amount": 761.0,
+        "date": "9/13/2023",
+        "type": "Education"
+    },
+    {
+        "id": 818,
+        "name": "Abbott Group",
+        "amount": 88.75,
+        "date": "12/11/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 819,
+        "name": "Huel LLC",
+        "amount": 709.85,
+        "date": "1/10/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 820,
+        "name": "Smith-Ratke",
+        "amount": 662.15,
+        "date": "9/8/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 821,
+        "name": "Maggio, Jacobs and Hammes",
+        "amount": 389.45,
+        "date": "11/24/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 822,
+        "name": "Hoppe-Hahn",
+        "amount": 721.93,
+        "date": "3/15/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 823,
+        "name": "Corwin and Sons",
+        "amount": 499.97,
+        "date": "8/14/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 824,
+        "name": "Reinger and Sons",
+        "amount": 36.44,
+        "date": "7/26/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 825,
+        "name": "Lesch and Sons",
+        "amount": 818.4,
+        "date": "3/6/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 826,
+        "name": "Mitchell, Schuster and Kshlerin",
+        "amount": 874.13,
+        "date": "4/8/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 827,
+        "name": "Stokes and Sons",
+        "amount": 334.78,
+        "date": "7/28/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 828,
+        "name": "O'Hara LLC",
+        "amount": 993.27,
+        "date": "1/19/2024",
+        "type": "Education"
+    },
+    {
+        "id": 829,
+        "name": "Douglas Inc",
+        "amount": 629.2,
+        "date": "1/23/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 830,
+        "name": "Braun Inc",
+        "amount": 753.76,
+        "date": "9/11/2023",
+        "type": "Education"
+    },
+    {
+        "id": 831,
+        "name": "Cruickshank LLC",
+        "amount": 425.08,
+        "date": "9/22/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 832,
+        "name": "Green Inc",
+        "amount": 722.45,
+        "date": "7/5/2023",
+        "type": "Education"
+    },
+    {
+        "id": 833,
+        "name": "Ortiz-Stanton",
+        "amount": 457.29,
+        "date": "1/1/2024",
+        "type": "Education"
+    },
+    {
+        "id": 834,
+        "name": "Wiegand, Bechtelar and Zieme",
+        "amount": 362.97,
+        "date": "7/24/2023",
+        "type": "Education"
+    },
+    {
+        "id": 835,
+        "name": "Hammes, Herzog and Gutkowski",
+        "amount": 758.99,
+        "date": "7/27/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 836,
+        "name": "Lynch-Kuhlman",
+        "amount": 472.12,
+        "date": "9/30/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 837,
+        "name": "O'Hara-Emard",
+        "amount": 449.9,
+        "date": "7/14/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 838,
+        "name": "Dietrich-Ritchie",
+        "amount": 143.77,
+        "date": "3/19/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 839,
+        "name": "Turner, Renner and Sauer",
+        "amount": 883.16,
+        "date": "3/23/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 840,
+        "name": "Gottlieb, Kihn and Muller",
+        "amount": 900.93,
+        "date": "7/16/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 841,
+        "name": "Schroeder-Harber",
+        "amount": 402.23,
+        "date": "6/20/2024",
+        "type": "Education"
+    },
+    {
+        "id": 842,
+        "name": "Osinski, Feil and Okuneva",
+        "amount": 124.41,
+        "date": "10/27/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 843,
+        "name": "Kuphal, Veum and Russel",
+        "amount": 663.72,
+        "date": "5/14/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 844,
+        "name": "Frami, Baumbach and Lubowitz",
+        "amount": 694.71,
+        "date": "1/25/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 845,
+        "name": "Strosin-Legros",
+        "amount": 545.72,
+        "date": "4/30/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 846,
+        "name": "Pfeffer, Towne and Keeling",
+        "amount": 951.64,
+        "date": "1/18/2024",
+        "type": "Education"
+    },
+    {
+        "id": 847,
+        "name": "Champlin Group",
+        "amount": 313.23,
+        "date": "5/2/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 848,
+        "name": "Legros Group",
+        "amount": 163.69,
+        "date": "3/26/2024",
+        "type": "Education"
+    },
+    {
+        "id": 849,
+        "name": "Rempel Group",
+        "amount": 926.64,
+        "date": "11/7/2023",
+        "type": "Education"
+    },
+    {
+        "id": 850,
+        "name": "Streich-Welch",
+        "amount": 658.52,
+        "date": "4/29/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 851,
+        "name": "Hayes-Lynch",
+        "amount": 331.72,
+        "date": "5/5/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 852,
+        "name": "Mayert-Bauch",
+        "amount": 662.53,
+        "date": "9/4/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 853,
+        "name": "Reilly-Lesch",
+        "amount": 449.92,
+        "date": "10/10/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 854,
+        "name": "Witting-Ebert",
+        "amount": 100.96,
+        "date": "9/29/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 855,
+        "name": "Davis and Sons",
+        "amount": 839.67,
+        "date": "2/10/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 856,
+        "name": "Lakin, Hoeger and Stokes",
+        "amount": 755.28,
+        "date": "3/29/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 857,
+        "name": "Smitham-Dicki",
+        "amount": 472.29,
+        "date": "1/10/2024",
+        "type": "Education"
+    },
+    {
+        "id": 858,
+        "name": "Kshlerin Group",
+        "amount": 703.63,
+        "date": "10/12/2023",
+        "type": "Education"
+    },
+    {
+        "id": 859,
+        "name": "Reichel, Johns and Larson",
+        "amount": 426.59,
+        "date": "4/25/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 860,
+        "name": "Hills, McGlynn and Boyer",
+        "amount": 231.58,
+        "date": "8/7/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 861,
+        "name": "Altenwerth, Dare and Quitzon",
+        "amount": 772.18,
+        "date": "10/16/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 862,
+        "name": "Leannon, Renner and Cormier",
+        "amount": 873.62,
+        "date": "11/18/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 863,
+        "name": "Corkery, Rohan and Dare",
+        "amount": 515.06,
+        "date": "4/11/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 864,
+        "name": "Lebsack LLC",
+        "amount": 673.81,
+        "date": "7/2/2023",
+        "type": "Education"
+    },
+    {
+        "id": 865,
+        "name": "Kassulke-Streich",
+        "amount": 10.02,
+        "date": "5/22/2024",
+        "type": "Education"
+    },
+    {
+        "id": 866,
+        "name": "Streich, Howe and Beahan",
+        "amount": 24.22,
+        "date": "5/19/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 867,
+        "name": "Schumm, Fisher and Herman",
+        "amount": 557.34,
+        "date": "12/4/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 868,
+        "name": "Lueilwitz-Mosciski",
+        "amount": 956.38,
+        "date": "6/18/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 869,
+        "name": "Labadie LLC",
+        "amount": 378.96,
+        "date": "11/11/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 870,
+        "name": "Muller Inc",
+        "amount": 909.32,
+        "date": "5/17/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 871,
+        "name": "Heaney-Schmidt",
+        "amount": 174.25,
+        "date": "6/15/2024",
+        "type": "Education"
+    },
+    {
+        "id": 872,
+        "name": "Dare, Cronin and Swaniawski",
+        "amount": 208.44,
+        "date": "1/29/2024",
+        "type": "Education"
+    },
+    {
+        "id": 873,
+        "name": "Mann and Sons",
+        "amount": 887.15,
+        "date": "2/18/2024",
+        "type": "Education"
+    },
+    {
+        "id": 874,
+        "name": "Kshlerin, Senger and Paucek",
+        "amount": 703.75,
+        "date": "9/15/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 875,
+        "name": "Olson-Emard",
+        "amount": 267.43,
+        "date": "9/26/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 876,
+        "name": "Auer, Gibson and O'Keefe",
+        "amount": 771.73,
+        "date": "3/3/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 877,
+        "name": "Wiza Group",
+        "amount": 548.33,
+        "date": "2/13/2024",
+        "type": "Education"
+    },
+    {
+        "id": 878,
+        "name": "Gulgowski Inc",
+        "amount": 991.16,
+        "date": "9/21/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 879,
+        "name": "Johns LLC",
+        "amount": 782.71,
+        "date": "8/24/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 880,
+        "name": "Von Inc",
+        "amount": 882.56,
+        "date": "5/22/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 881,
+        "name": "Tillman and Sons",
+        "amount": 281.25,
+        "date": "10/22/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 882,
+        "name": "Wehner LLC",
+        "amount": 936.38,
+        "date": "6/17/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 883,
+        "name": "Parker-Parker",
+        "amount": 703.82,
+        "date": "9/28/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 884,
+        "name": "Effertz and Sons",
+        "amount": 209.17,
+        "date": "2/21/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 885,
+        "name": "Witting-Miller",
+        "amount": 689.87,
+        "date": "1/4/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 886,
+        "name": "Cassin Group",
+        "amount": 42.98,
+        "date": "9/11/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 887,
+        "name": "Rath, Schuppe and Klein",
+        "amount": 308.77,
+        "date": "3/18/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 888,
+        "name": "Shields LLC",
+        "amount": 612.35,
+        "date": "5/23/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 889,
+        "name": "Lebsack and Sons",
+        "amount": 570.76,
+        "date": "9/17/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 890,
+        "name": "Harvey Inc",
+        "amount": 382.13,
+        "date": "11/21/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 891,
+        "name": "Rosenbaum, Hickle and Welch",
+        "amount": 720.07,
+        "date": "5/12/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 892,
+        "name": "Koss, Koch and Stamm",
+        "amount": 800.7,
+        "date": "11/11/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 893,
+        "name": "Turner, Reichel and Kunde",
+        "amount": 324.19,
+        "date": "10/22/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 894,
+        "name": "Nitzsche and Sons",
+        "amount": 719.88,
+        "date": "3/24/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 895,
+        "name": "Frami, Williamson and Kozey",
+        "amount": 433.42,
+        "date": "1/20/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 896,
+        "name": "Hirthe-Vandervort",
+        "amount": 791.01,
+        "date": "11/21/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 897,
+        "name": "Keeling Group",
+        "amount": 335.46,
+        "date": "9/18/2023",
+        "type": "Education"
+    },
+    {
+        "id": 898,
+        "name": "Romaguera-Upton",
+        "amount": 577.48,
+        "date": "11/4/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 899,
+        "name": "Hahn, Gibson and Luettgen",
+        "amount": 159.38,
+        "date": "3/21/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 900,
+        "name": "Cremin-Ritchie",
+        "amount": 691.2,
+        "date": "7/3/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 901,
+        "name": "Schaefer-Frami",
+        "amount": 718.19,
+        "date": "10/1/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 902,
+        "name": "Haag, Witting and Rutherford",
+        "amount": 731.97,
+        "date": "8/25/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 903,
+        "name": "Murphy-Gutkowski",
+        "amount": 155.3,
+        "date": "2/8/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 904,
+        "name": "O'Connell, Donnelly and Schulist",
+        "amount": 133.48,
+        "date": "5/4/2024",
+        "type": "Education"
+    },
+    {
+        "id": 905,
+        "name": "Yundt, Connelly and Mertz",
+        "amount": 572.85,
+        "date": "10/28/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 906,
+        "name": "Gusikowski-Heathcote",
+        "amount": 134.17,
+        "date": "12/14/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 907,
+        "name": "Fadel and Sons",
+        "amount": 252.95,
+        "date": "5/25/2024",
+        "type": "Education"
+    },
+    {
+        "id": 908,
+        "name": "Leffler-Kemmer",
+        "amount": 785.1,
+        "date": "1/28/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 909,
+        "name": "Grady, Corwin and Cassin",
+        "amount": 735.28,
+        "date": "8/19/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 910,
+        "name": "Kuhic and Sons",
+        "amount": 912.22,
+        "date": "8/28/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 911,
+        "name": "McLaughlin Group",
+        "amount": 625.56,
+        "date": "5/5/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 912,
+        "name": "Zieme, Schinner and VonRueden",
+        "amount": 398.7,
+        "date": "3/13/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 913,
+        "name": "Gleason, Crist and Zulauf",
+        "amount": 720.89,
+        "date": "6/27/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 914,
+        "name": "Russel-D'Amore",
+        "amount": 251.69,
+        "date": "11/20/2023",
+        "type": "Education"
+    },
+    {
+        "id": 915,
+        "name": "Waters LLC",
+        "amount": 574.98,
+        "date": "9/1/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 916,
+        "name": "Jacobson, MacGyver and Morar",
+        "amount": 312.45,
+        "date": "3/17/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 917,
+        "name": "Rowe, Schaden and Hirthe",
+        "amount": 122.98,
+        "date": "12/23/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 918,
+        "name": "Lehner-Batz",
+        "amount": 706.05,
+        "date": "2/24/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 919,
+        "name": "Blick-Schuster",
+        "amount": 640.15,
+        "date": "6/10/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 920,
+        "name": "Dietrich, Jaskolski and Ruecker",
+        "amount": 263.89,
+        "date": "7/9/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 921,
+        "name": "Brekke LLC",
+        "amount": 505.46,
+        "date": "2/29/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 922,
+        "name": "Boyer-Mann",
+        "amount": 627.16,
+        "date": "6/18/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 923,
+        "name": "Feil, Nienow and Kuhlman",
+        "amount": 158.99,
+        "date": "8/22/2023",
+        "type": "Education"
+    },
+    {
+        "id": 924,
+        "name": "Morar and Sons",
+        "amount": 88.02,
+        "date": "12/27/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 925,
+        "name": "Gleason, Koss and Murray",
+        "amount": 366.51,
+        "date": "9/29/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 926,
+        "name": "Nikolaus-Raynor",
+        "amount": 547.6,
+        "date": "5/7/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 927,
+        "name": "Hammes LLC",
+        "amount": 917.36,
+        "date": "8/24/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 928,
+        "name": "Langworth, Gutmann and Daugherty",
+        "amount": 625.05,
+        "date": "5/12/2024",
+        "type": "Education"
+    },
+    {
+        "id": 929,
+        "name": "Baumbach-Bosco",
+        "amount": 245.5,
+        "date": "7/25/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 930,
+        "name": "Jenkins LLC",
+        "amount": 112.18,
+        "date": "3/22/2024",
+        "type": "Education"
+    },
+    {
+        "id": 931,
+        "name": "Langosh, Vandervort and Toy",
+        "amount": 877.72,
+        "date": "8/17/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 932,
+        "name": "Davis, Marks and Grady",
+        "amount": 637.39,
+        "date": "8/14/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 933,
+        "name": "Watsica-Feil",
+        "amount": 23.03,
+        "date": "4/2/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 934,
+        "name": "Batz, Jast and Fahey",
+        "amount": 715.88,
+        "date": "12/17/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 935,
+        "name": "Cronin and Sons",
+        "amount": 738.7,
+        "date": "5/31/2024",
+        "type": "Education"
+    },
+    {
+        "id": 936,
+        "name": "Waters-Beier",
+        "amount": 793.29,
+        "date": "1/21/2024",
+        "type": "Education"
+    },
+    {
+        "id": 937,
+        "name": "Wiza-O'Conner",
+        "amount": 646.48,
+        "date": "2/13/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 938,
+        "name": "Schmitt and Sons",
+        "amount": 347.89,
+        "date": "8/24/2023",
+        "type": "Education"
+    },
+    {
+        "id": 939,
+        "name": "Crooks, Farrell and Batz",
+        "amount": 231.56,
+        "date": "10/30/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 940,
+        "name": "Hyatt Group",
+        "amount": 334.42,
+        "date": "4/23/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 941,
+        "name": "Durgan and Sons",
+        "amount": 188.19,
+        "date": "11/21/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 942,
+        "name": "Reynolds-O'Reilly",
+        "amount": 943.84,
+        "date": "11/20/2023",
+        "type": "Education"
+    },
+    {
+        "id": 943,
+        "name": "Monahan Group",
+        "amount": 898.34,
+        "date": "5/21/2024",
+        "type": "Education"
+    },
+    {
+        "id": 944,
+        "name": "Rolfson-Ondricka",
+        "amount": 17.75,
+        "date": "6/4/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 945,
+        "name": "Leffler-Volkman",
+        "amount": 508.26,
+        "date": "2/25/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 946,
+        "name": "Beier, Fritsch and Dibbert",
+        "amount": 723.51,
+        "date": "6/5/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 947,
+        "name": "Halvorson-Bechtelar",
+        "amount": 454.45,
+        "date": "3/8/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 948,
+        "name": "Berge-Schultz",
+        "amount": 511.58,
+        "date": "11/4/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 949,
+        "name": "Monahan, Waelchi and Emard",
+        "amount": 834.69,
+        "date": "4/24/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 950,
+        "name": "Bins, Hoeger and Bins",
+        "amount": 941.77,
+        "date": "3/25/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 951,
+        "name": "Runolfsdottir LLC",
+        "amount": 720.82,
+        "date": "2/1/2024",
+        "type": "Education"
+    },
+    {
+        "id": 952,
+        "name": "Upton, Raynor and Larkin",
+        "amount": 24.13,
+        "date": "5/8/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 953,
+        "name": "Yundt LLC",
+        "amount": 64.19,
+        "date": "1/29/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 954,
+        "name": "Johnston-Ryan",
+        "amount": 21.73,
+        "date": "2/13/2024",
+        "type": "Education"
+    },
+    {
+        "id": 955,
+        "name": "McCullough, Wilderman and Bradtke",
+        "amount": 502.04,
+        "date": "2/22/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 956,
+        "name": "Kertzmann-Schaden",
+        "amount": 935.86,
+        "date": "11/3/2023",
+        "type": "Education"
+    },
+    {
+        "id": 957,
+        "name": "Halvorson-Goldner",
+        "amount": 402.76,
+        "date": "5/3/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 958,
+        "name": "Dooley, Sanford and Lang",
+        "amount": 377.77,
+        "date": "12/15/2023",
+        "type": "Education"
+    },
+    {
+        "id": 959,
+        "name": "Gottlieb, Fritsch and Bradtke",
+        "amount": 12.34,
+        "date": "6/10/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 960,
+        "name": "Wolff Inc",
+        "amount": 179.38,
+        "date": "6/4/2024",
+        "type": "Education"
+    },
+    {
+        "id": 961,
+        "name": "Heaney-Williamson",
+        "amount": 414.21,
+        "date": "10/23/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 962,
+        "name": "Mitchell-Boyle",
+        "amount": 404.9,
+        "date": "6/21/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 963,
+        "name": "Bernhard Inc",
+        "amount": 667.11,
+        "date": "4/17/2024",
+        "type": "Education"
+    },
+    {
+        "id": 964,
+        "name": "Wiegand-Rau",
+        "amount": 790.04,
+        "date": "7/18/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 965,
+        "name": "Pouros Group",
+        "amount": 819.13,
+        "date": "8/15/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 966,
+        "name": "Rice Group",
+        "amount": 988.65,
+        "date": "8/21/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 967,
+        "name": "Douglas LLC",
+        "amount": 198.51,
+        "date": "4/30/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 968,
+        "name": "Price-Littel",
+        "amount": 724.95,
+        "date": "9/12/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 969,
+        "name": "Hartmann LLC",
+        "amount": 178.84,
+        "date": "12/7/2023",
+        "type": "Education"
+    },
+    {
+        "id": 970,
+        "name": "Legros-Hettinger",
+        "amount": 56.31,
+        "date": "5/3/2024",
+        "type": "Education"
+    },
+    {
+        "id": 971,
+        "name": "Fadel-Kirlin",
+        "amount": 372.83,
+        "date": "12/28/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 972,
+        "name": "Pacocha, Johnston and Douglas",
+        "amount": 647.98,
+        "date": "5/14/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 973,
+        "name": "Satterfield and Sons",
+        "amount": 860.13,
+        "date": "1/11/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 974,
+        "name": "Stokes Inc",
+        "amount": 728.69,
+        "date": "12/2/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 975,
+        "name": "Ferry, Fisher and Hartmann",
+        "amount": 358.7,
+        "date": "12/31/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 976,
+        "name": "Purdy-Welch",
+        "amount": 338.22,
+        "date": "2/4/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 977,
+        "name": "Paucek, Robel and Lynch",
+        "amount": 554.1,
+        "date": "9/13/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 978,
+        "name": "Bednar Group",
+        "amount": 284.1,
+        "date": "8/26/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 979,
+        "name": "Abernathy-Howell",
+        "amount": 754.65,
+        "date": "3/6/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 980,
+        "name": "Sauer Inc",
+        "amount": 662.04,
+        "date": "3/8/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 981,
+        "name": "Ortiz, Tillman and Berge",
+        "amount": 747.11,
+        "date": "11/7/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 982,
+        "name": "Von, O'Conner and Schmeler",
+        "amount": 779.19,
+        "date": "12/4/2023",
+        "type": "Education"
+    },
+    {
+        "id": 983,
+        "name": "Dach LLC",
+        "amount": 280.15,
+        "date": "5/18/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 984,
+        "name": "Collier-Rolfson",
+        "amount": 872.78,
+        "date": "8/28/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 985,
+        "name": "Reinger, O'Conner and Hand",
+        "amount": 667.28,
+        "date": "12/27/2023",
+        "type": "Education"
+    },
+    {
+        "id": 986,
+        "name": "Witting, Cremin and Wuckert",
+        "amount": 141.34,
+        "date": "4/22/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 987,
+        "name": "Jerde, Romaguera and Feeney",
+        "amount": 546.01,
+        "date": "11/27/2023",
+        "type": "Education"
+    },
+    {
+        "id": 988,
+        "name": "Leuschke, Ferry and Fisher",
+        "amount": 795.32,
+        "date": "3/27/2024",
+        "type": "Travel"
+    },
+    {
+        "id": 989,
+        "name": "Spinka LLC",
+        "amount": 393.72,
+        "date": "11/20/2023",
+        "type": "Education"
+    },
+    {
+        "id": 990,
+        "name": "Goyette LLC",
+        "amount": 149.98,
+        "date": "9/26/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 991,
+        "name": "Skiles, Barton and Terry",
+        "amount": 754.68,
+        "date": "10/1/2023",
+        "type": "Education"
+    },
+    {
+        "id": 992,
+        "name": "Green-Doyle",
+        "amount": 598.35,
+        "date": "12/17/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 993,
+        "name": "Greenholt, Cole and Hintz",
+        "amount": 57.93,
+        "date": "6/30/2023",
+        "type": "Education"
+    },
+    {
+        "id": 994,
+        "name": "Davis-Sporer",
+        "amount": 958.52,
+        "date": "6/12/2024",
+        "type": "Entertainment"
+    },
+    {
+        "id": 995,
+        "name": "Collier, Klocko and Smitham",
+        "amount": 130.01,
+        "date": "7/16/2023",
+        "type": "Travel"
+    },
+    {
+        "id": 996,
+        "name": "Turcotte-Harber",
+        "amount": 931.31,
+        "date": "4/18/2024",
+        "type": "Bill"
+    },
+    {
+        "id": 997,
+        "name": "Blick-Terry",
+        "amount": 267.87,
+        "date": "8/30/2023",
+        "type": "Bill"
+    },
+    {
+        "id": 998,
+        "name": "Fisher-Boehm",
+        "amount": 106.72,
+        "date": "9/24/2023",
+        "type": "Entertainment"
+    },
+    {
+        "id": 999,
+        "name": "Heaney-Stroman",
+        "amount": 841.62,
+        "date": "6/9/2024",
+        "type": "Education"
+    },
+    {
+        "id": 1000,
+        "name": "Feil, Larson and Dickens",
+        "amount": 546.11,
+        "date": "4/8/2024",
+        "type": "Entertainment"
+    }
+]
+
+
+
+// export const getExpenseBarChartDataByType  = () : BarDatum [] => {
+
+//   let travel : number = 0;
+//   let bill : number = 0;
+//   let entertainment : number = 0;
+//   let education : number = 0;
+
+//   for (const key in MockExpenseDataBarChart as Array<BarDatum> ) {
+//     for (let i  = 0 ; i < MockExpenseDataBarChart.length; i++ ) {
+//       switch (MockDataBarChart[i]["type"]) {
+//      // @ts-ingore
+//       case 'Travel':
+//         travel =+ 1;
+//       // @ts-ingore
+
+//       case 'bill':
+//         bill =+ 1;
+      
+//       // @ts-ingore
+
+//       case 'entertainment':
+//         entertainment =+ 1;
+      
+//         // @ts-ingore
+
+//       case 'education':
+//         education =+ 1;
+
+//         default:
+//           break;
+//       }
+//     }
+//   }
+
+//   const MockExpenseDataByType : BarDatum[] = [
+
+//     {
+//       "type" : "Bill",
+//       "bill" : bill,
+//       "billcolor" : "hsl(6, 70%, 50%)"
+
+//     },
+//     {
+//       "type" : "Travel",
+//       "travel" : travel,
+//       "travelcolor" : "hsl(30, 70%, 50%)"
+
+//     },
+//     {
+//       "type" : "Entertainment",
+//       "entertainment" : entertainment,
+//       "entertainmentcolor" : "hsl(150, 70%, 50%)"
+      
+//     },
+//     {
+//       "type" : "Education",
+//       "education" : education,
+//       "educationcolor" : "hsl(210, 70%, 50%)"
+//     },
+//     {
+//       "type" : "Other",
+//       "other" : 0,
+//       "othercolor" : "hsl(0, 0%, 0%)"
+//     }
+//   ];
+  
+//   return MockExpenseDataByType;
+// }

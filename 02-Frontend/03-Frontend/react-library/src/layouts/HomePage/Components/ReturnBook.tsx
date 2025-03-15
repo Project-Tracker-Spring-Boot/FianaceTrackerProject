@@ -1,5 +1,5 @@
 import React from 'react'
-import ExpenseModel from '../../Model/ExpenseModel';
+import { ExpenseModel } from '../../Model/ExpenseModel';
 
 export const ReturnBook : React.FC<{expense: ExpenseModel}> = (props) => {
     return(

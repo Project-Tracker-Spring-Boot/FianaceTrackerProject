@@ -11,8 +11,8 @@ export const HerosB = () => {
                 It's the first step to making smarter financial decisions, 
                 reaching your goals faster, and leveling up your financial future!</p>
                 <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                    <button type="button" className="btn main-color btn-lg px-4 me-sm-3 text-white">Sign In</button>
-                    <button type="button" className="btn main-color btn-lg px-4 text-white">Sign Up</button>
+        
+                    <button type="button" className="btn main-color btn-lg px-4 text-white">Join Us!</button>
                 </div>
             </div>
             <div className="overflow-hidden" id="herosBDiv">

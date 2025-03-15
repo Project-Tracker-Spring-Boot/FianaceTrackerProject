@@ -23,6 +23,11 @@ public class ExpenseController {
 
     }
 
+    @GetMapping("/get-all")
+    public List<Expense> getExpensesList () {
+        return this.expenseService.getAllExpenses();
+    }
+
     @PostMapping("/create-expense")
     public String addUserExpense (@ModelAttribute("EntryExpenseDTO") ExpenseRequest expenseRequest , Model model) {
 

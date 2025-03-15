@@ -8,18 +8,33 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo (3) (com.example)" />
-        <module name="demo" />
+        <module name="demo (2)" />
         <module name="demo (2) (com.example)" />
+        <module name="demo (1) (com.FinanceTracker)" />
+        <module name="demo (1)" />
         <module name="demo (1) (com.example)" />
+        <module name="demo (4)" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo (1) (com.example)" target="17" />
+      <module name="demo (2) (com.example)" target="17" />
+      <module name="demo (2) (com.FinanceTracker)" target="17" />
+      <module name="demo (3)" target="17" />
+      <module name="demo (3) (com.example)" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
+      <module name="demo (1)" options="-parameters" />
       <module name="demo (1) (com.example)" options="-parameters" />
+      <module name="demo (2) (com.FinanceTracker)" options="-parameters" />
       <module name="demo (2) (com.example)" options="-parameters" />
+      <module name="demo (3)" options="-parameters" />
       <module name="demo (3) (com.example)" options="-parameters" />
+      <module name="demo (4)" options="" />
     </option>
   </component>
 </project>

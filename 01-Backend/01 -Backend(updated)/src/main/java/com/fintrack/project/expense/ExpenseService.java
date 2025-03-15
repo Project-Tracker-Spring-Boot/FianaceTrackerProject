@@ -17,7 +17,7 @@ public class ExpenseService {
 
         var expense = Expense.builder()
                 .name(expenseRequest.getName())
-                .amount(expenseRequest.getCost())
+                .number(expenseRequest.getCost())
                 .type(expenseRequest.getType())
                 .build();
         return expenseRepository.save(expense);
